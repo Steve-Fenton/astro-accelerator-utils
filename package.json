@@ -1,8 +1,8 @@
 {
   "name": "astro-accelerator-utils",
-  "version": "0.0.1",
+  "version": "0.0.4",
   "description": "Astro utilities for Astro Accelerator.",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "build": "npx tsc"
   },

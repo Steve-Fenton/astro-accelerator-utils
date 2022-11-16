@@ -3,6 +3,7 @@
       "strict": true,
       "declaration": true,
       "outDir": "dist",
+      "target": "ES2015",
       "module": "CommonJS"
   }
 }
