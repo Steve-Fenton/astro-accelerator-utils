@@ -6,6 +6,9 @@
   "scripts": {
     "build": "npx tsc"
   },
+  "files": [
+    "dist/*"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Steve-Fenton/astro-accelerator-utils.git"
