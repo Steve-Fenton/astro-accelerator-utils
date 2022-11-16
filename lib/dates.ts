@@ -1,9 +1,6 @@
 import type { Site } from '../Site';
 import type { Frontmatter } from '../Frontmatter';
 
-export type { Site } from '../Site';
-export type { Frontmatter as FrontMatter } from '../Frontmatter';
-
 export function formatDate (frontmatter: Frontmatter, lang: string, site: Site) {
     const date = frontmatter.pubDate ?? '';
   
