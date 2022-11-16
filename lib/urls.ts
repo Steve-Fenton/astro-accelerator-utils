@@ -1,4 +1,4 @@
-import type { Site } from '../Site';
+import type { Site } from '../types/Site';
 
 export function addSlashToUrl (url: URL) {
     url.pathname += url.pathname.endsWith('/') ? '' : '/';
