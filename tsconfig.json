@@ -1,9 +1,13 @@
 {
+  "exclude": [
+    "node_modules",
+    "dist"
+  ],
   "compilerOptions": {
       "strict": true,
       "declaration": true,
       "outDir": "dist",
       "target": "ES2015",
-      "module": "CommonJS"
+      "module": "CommonJS",
   }
 }
