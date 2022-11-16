@@ -1,0 +1,27 @@
+{
+  "name": "astro-accelerator-utils",
+  "version": "0.0.1",
+  "description": "Astro utilities for Astro Accelerator.",
+  "main": "index.js",
+  "scripts": {
+    "build": "npx tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Steve-Fenton/astro-accelerator-utils.git"
+  },
+  "keywords": [
+    "astro",
+    "accelerator",
+    "ssg"
+  ],
+  "author": "Steve Fenton",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/Steve-Fenton/astro-accelerator-utils/issues"
+  },
+  "homepage": "https://astro.stevefenton.co.uk/",
+  "devDependencies": {
+    "typescript": "^4.9.3"
+  }
+}
