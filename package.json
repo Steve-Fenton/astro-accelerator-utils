@@ -1,13 +1,11 @@
 {
   "name": "astro-accelerator-utils",
-  "version": "0.0.7",
+  "version": "0.0.15",
   "description": "Astro utilities for Astro Accelerator.",
-  "main": "dist/index.js",
-  "scripts": {
-    "build": "npx tsc"
-  },
+  "main": "index.mjs",
   "files": [
-    "dist/*"
+    "index.mjs",
+    "lib/*"
   ],
   "repository": {
     "type": "git",
