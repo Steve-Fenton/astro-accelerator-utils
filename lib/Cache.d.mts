@@ -1,24 +1,24 @@
 /**
  * Get's the path of the cache files
- * @returns {string}
+ * @returns {Promise<string>}
  */
-export function getCachePath(): string;
+export function getCachePath(): Promise<string>;
 /**
  * Gets the file path for a cache item
  * @param {string} key
- * @returns {string}
+ * @returns {Promise<string>}
  */
-export function getItemPath(key: string): string;
+export function getItemPath(key: string): Promise<string>;
 /**
  * Gets an item from the cache
  * @param {string} key
- * @returns {any}
+ * @returns {Promise<any>}
  */
-export function getItem(key: string): any;
+export function getItem(key: string): Promise<any>;
 /**
  * Adds an item to the cache
  * @param {string} key
- * @param {any} value
+ * @param {Promise<void>} value
  */
-export function setItem(key: string, value: any): Promise<void>;
+export function setItem(key: string, value: Promise<void>): Promise<void>;
 export const maxAge: 200;

@@ -1,25 +1,25 @@
 /**
- * @typedef { import("../types/Markdown") } Markdown
+ * @typedef { import("../types/Astro").MarkdownInstance} MarkdownInstance
  */
 /**
  * Sorts by the pubDate field
- * @param {Markdown} a
- * @param {Markdown} b
+ * @param {MarkdownInstance<Record<string, any>>} a
+ * @param {MarkdownInstance<Record<string, any>>} b
  * @returns {any}
  */
-export function sortByPubDate(a: Markdown, b: Markdown): any;
+export function sortByPubDate(a: any, b: any): any;
 /**
  * Sorts by the pubDate field in descending order
- * @param {Markdown} a
- * @param {Markdown} b
+ * @param {MarkdownInstance<Record<string, any>>} a
+ * @param {MarkdownInstance<Record<string, any>>} b
  * @returns {any}
  */
-export function sortByPubDateDesc(a: Markdown, b: Markdown): any;
+export function sortByPubDateDesc(a: any, b: any): any;
 /**
  * Sorts by the modDate field
- * @param {Markdown} a
- * @param {Markdown} b
+ * @param {MarkdownInstance<Record<string, any>>} a
+ * @param {MarkdownInstance<Record<string, any>>} b
  * @returns {any}
  */
-export function sortByModDate(a: Markdown, b: Markdown): any;
-export type Markdown = typeof import("../types/Markdown");
+export function sortByModDate(a: any, b: any): any;
+export type MarkdownInstance = any;

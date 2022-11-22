@@ -1,6 +1,6 @@
 {
   "name": "astro-accelerator-utils",
-  "version": "0.0.21",
+  "version": "0.0.23",
   "description": "Astro utilities for Astro Accelerator.",
   "main": "index.mjs",
   "files": [
@@ -11,7 +11,7 @@
   ],
   "types": "index.d.mts",
   "scripts": {
-    "types": "npx tsc index.mjs --allowJs --declaration --emitDeclarationOnly"
+    "types": "node ./clean.mjs && npx tsc index.mjs --allowJs --declaration --emitDeclarationOnly"
   },
   "repository": {
     "type": "git",
@@ -29,7 +29,7 @@
   },
   "homepage": "https://astro.stevefenton.co.uk/",
   "devDependencies": {
-    "typescript": "^4.9.3",
-    "@types/node": "^18.11.9"
+    "@types/node": "^18.11.9",
+    "typescript": "^4.9.3"
   }
 }

@@ -1,2 +1,2 @@
-import { Markdown } from "./Markdown";
-export type PagePredicate = (value: Markdown, index: number, array: Markdown[]) => boolean;
+import { MarkdownInstance } from "./Astro";
+export type PagePredicate = (value: MarkdownInstance<Record<string, any>>, index: number, array: MarkdownInstance<Record<string, any>>[]) => boolean;

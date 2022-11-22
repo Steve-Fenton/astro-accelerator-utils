@@ -1,2 +1,2 @@
-import { Markdown } from "./Markdown";
-export type PageFunction = () => Markdown[];
+import { MarkdownInstance } from "./Astro";
+export type PageFunction = () => MarkdownInstance<Record<string, any>>[];

@@ -1,44 +1,44 @@
 /**
- * @typedef { import("../types/PageFunction") } PageFunction
- * @typedef { import("../types/PagePredicate") } PagePredicate
- * @typedef { import("../types/Markdown") } Markdown
+ * @typedef { import("../types/PageFunction").PageFunction } PageFunction
+ * @typedef { import("../types/PagePredicate").PagePredicate } PagePredicate
+ * @typedef { import("../types/Astro").MarkdownInstance} MarkdownInstance
  */
 /**
  * Predicate for whether a page should appear in the sitemap
- * @param {Markdown} p
+ * @param {MarkdownInstance<Record<string, any>>} p
  * @returns {boolean}
  */
-export function showInSitemap(p: Markdown): boolean;
+export function showInSitemap(p: any): boolean;
 /**
  * Predicate for whether a page should appear in the site search
- * @param {Markdown} p
+ * @param {MarkdownInstance<Record<string, any>>} p
  * @returns {boolean}
  */
-export function showInSearch(p: Markdown): boolean;
+export function showInSearch(p: any): boolean;
 /**
  * Predicate for whether a page should appear in the navigation menu
- * @param {Markdown} p
+ * @param {MarkdownInstance<Record<string, any>>} p
  * @returns {boolean}
  */
-export function showInMenu(p: Markdown): boolean;
+export function showInMenu(p: any): boolean;
 /**
  * Predicate for whether a page is an author page
- * @param {Markdown} p
+ * @param {MarkdownInstance<Record<string, any>>} p
  * @returns {boolean}
  */
-export function isAuthor(p: Markdown): boolean;
+export function isAuthor(p: any): boolean;
 /**
  * Predicate for whether a page is a search page
- * @param {Markdown} p
+ * @param {MarkdownInstance<Record<string, any>>} p
  * @returns {boolean}
  */
-export function isSearch(p: Markdown): boolean;
+export function isSearch(p: any): boolean;
 /**
  * Predicate for whether a page should be listed
- * @param {Markdown} p
+ * @param {MarkdownInstance<Record<string, any>>} p
  * @returns {boolean}
  */
-export function isListable(p: Markdown): boolean;
-export type PageFunction = typeof import("../types/PageFunction");
-export type PagePredicate = typeof import("../types/PagePredicate");
-export type Markdown = typeof import("../types/Markdown");
+export function isListable(p: any): boolean;
+export type PageFunction = import("../types/PageFunction").PageFunction;
+export type PagePredicate = import("../types/PagePredicate").PagePredicate;
+export type MarkdownInstance = any;
