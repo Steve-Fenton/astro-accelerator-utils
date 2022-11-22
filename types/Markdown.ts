@@ -1,4 +1,4 @@
-export interface Markdown<T extends Record<string, any>> {
+export interface Markdown {
     url: string;
-    frontmatter: T;
+    frontmatter: Record<string, any>;
 }

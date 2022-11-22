@@ -1,7 +1,15 @@
 /**
- * Fetches pages
- * @param {import("../types/PageFunction.js").PageFunction} fetchPages
- * @param {import("../types/PagePredicate.js").PagePredicate} filter
- * @returns {import("../types/Markdown").Markdown<Record<string, any>[]}
+ * @typedef { import("../types/PageFunction") } PageFunction
+ * @typedef { import("../types/PagePredicate") } PagePredicate
+ * @typedef { import("../types/Markdown") } Markdown
  */
-export function getPages(fetchPages: import("../types/PageFunction.js").PageFunction, filter: import("../types/PagePredicate.js").PagePredicate): import("../types/Markdown").Markdown<Record<string, any>[]>;
+/**
+ * Fetches pages
+ * @param {PageFunction} fetchPages
+ * @param {PagePredicate} [filter]
+ * @returns {Markdown[]}
+ */
+export function getPages(fetchPages: PageFunction, filter?: PagePredicate): Markdown[];
+export type PageFunction = typeof import("../types/PageFunction");
+export type PagePredicate = typeof import("../types/PagePredicate");
+export type Markdown = typeof import("../types/Markdown");

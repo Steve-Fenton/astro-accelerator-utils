@@ -18,7 +18,7 @@ export function getItem(key: string): any;
 /**
  * Adds an item to the cache
  * @param {string} key
- * @param {object} value
+ * @param {any} value
  */
-export function setItem(key: string, value: object): Promise<void>;
+export function setItem(key: string, value: any): Promise<void>;
 export const maxAge: 200;
