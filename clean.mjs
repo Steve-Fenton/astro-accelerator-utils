@@ -7,12 +7,13 @@ const files = [
     'index.d.mts',
     '/lib/cache.d.mts',
     '/lib/dates.d.mts',
-    './lib/navigation.d.mts',
-    './lib/markdown.d.mts',
+    '/lib/navigation.d.mts',
+    '/lib/markdown.d.mts',
     '/lib/postFiltering.d.mts',
     '/lib/postOrdering.d.mts',
     '/lib/postPaging.d.mts',
     '/lib/postQueries.d.mts',
+    '/lib/taxonomy.d.mts',
     '/lib/urls.d.mts',
     '/types/Astro.d.ts',
     '/types/AuthorInfo.d.ts',
@@ -22,7 +23,8 @@ const files = [
     '/types/Link.d.ts',
     '/types/NavPage.d.ts',
     '/types/PagePredicate.d.ts',
-    '/types/Site.d.ts'
+    '/types/Site.d.ts',
+    '/types/Taxonomy.d.ts'
 ]
 
 files.forEach(f => {
