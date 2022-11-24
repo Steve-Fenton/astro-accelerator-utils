@@ -27,9 +27,9 @@ export function getAuthorInfo(slug: string): Promise<AuthorInfo>;
  * Returns a list of breadcrumbs
  * @param {URL} currentUrl
  * @param {Site} site
- * @returns {NavPage[]}
+ * @returns {Promise<NavPage[]>}
  */
-export function getBreadcrumbs(currentUrl: URL, site: Site): NavPage[];
+export function getBreadcrumbs(currentUrl: URL, site: Site): Promise<NavPage[]>;
 /**
  * Converts a MarkdownInstance into a NavPage
  * @param {MarkdownInstance} page

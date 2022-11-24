@@ -4,5 +4,6 @@ import * as PostOrdering from "./lib/postOrdering.mjs";
 import * as PostPaging from "./lib/postPaging.mjs";
 import * as Cache from "./lib/cache.mjs";
 import * as Dates from "./lib/dates.mjs";
+import * as Markdown from "./lib/markdown.mjs";
 import * as Urls from "./lib/urls.mjs";
-export { PostQueries, PostFiltering, PostOrdering, PostPaging, Cache, Dates, Urls };
+export { PostQueries, PostFiltering, PostOrdering, PostPaging, Cache, Dates, Markdown, Urls };
