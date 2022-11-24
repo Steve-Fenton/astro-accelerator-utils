@@ -7,6 +7,7 @@ const files = [
     'index.d.mts',
     '/lib/cache.d.mts',
     '/lib/dates.d.mts',
+    '/lib/footerMenu.d.mts',
     '/lib/navigation.d.mts',
     '/lib/markdown.d.mts',
     '/lib/postFiltering.d.mts',
@@ -24,7 +25,8 @@ const files = [
     '/types/NavPage.d.ts',
     '/types/PagePredicate.d.ts',
     '/types/Site.d.ts',
-    '/types/Taxonomy.d.ts'
+    '/types/Taxonomy.d.ts',
+    '/types/Translations.d.ts'
 ]
 
 files.forEach(f => {

@@ -6,9 +6,10 @@
  *
  * @param {URL} currentUrl
  * @param {Site} site
+ * @param {NavPage | 'auto'} menu
  * @returns {Promise<NavPage[]}
  */
-export function getMenu(currentUrl: URL, site: Site): Promise<NavPage[]>;
+export function getMenu(currentUrl: URL, site: Site, menu: NavPage | 'auto'): Promise<NavPage[]>;
 /**
  *
  * @param {NavPage | 'auto' | 'tags' | 'toptags' | 'categories'} item
