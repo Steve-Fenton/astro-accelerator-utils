@@ -5,6 +5,7 @@ import * as PostPaging from './lib/postPaging.mjs';
 import * as Cache from './lib/cache.mjs';
 import * as Dates from './lib/dates.mjs';
 import * as Markdown from './lib/markdown.mjs';
+import * as Navigation from './lib/navigation.mjs';
 import * as Urls from './lib/urls.mjs';
 
 export {
@@ -15,5 +16,6 @@ export {
     Cache,
     Dates,
     Markdown,
+    Navigation,
     Urls
 };
