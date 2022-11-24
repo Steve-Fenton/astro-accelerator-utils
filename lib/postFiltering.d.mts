@@ -1,5 +1,4 @@
 /**
- * @typedef { import("../types/PageFunction").PageFunction } PageFunction
  * @typedef { import("../types/PagePredicate").PagePredicate } PagePredicate
  * @typedef { import("../types/Astro").MarkdownInstance} MarkdownInstance
  */
@@ -39,6 +38,5 @@ export function isSearch(p: any): boolean;
  * @returns {boolean}
  */
 export function isListable(p: any): boolean;
-export type PageFunction = import("../types/PageFunction").PageFunction;
 export type PagePredicate = import("../types/PagePredicate").PagePredicate;
 export type MarkdownInstance = any;

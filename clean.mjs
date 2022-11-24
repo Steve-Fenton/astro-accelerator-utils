@@ -13,7 +13,6 @@ const files = [
     '/lib/urls.d.mts',
     '/types/Astro.d.ts',
     '/types/Frontmatter.d.ts',
-    '/types/PageFunction.d.ts',
     '/types/PagePredicate.d.ts',
     '/types/Site.d.ts'
 ]
