@@ -1,5 +1,6 @@
-export type MarkdownInstance<T extends Record<string, any>> = {
-    frontmatter: T;
+import { Frontmatter } from "./Frontmatter";
+export type MarkdownInstance = {
+    frontmatter: Frontmatter;
     /** Absolute file path (e.g. `/home/user/projects/.../file.md`) */
     file: string;
     /** Browser URL for files under `/src/pages` (e.g. `/en/guides/markdown-content`) */

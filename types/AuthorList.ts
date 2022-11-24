@@ -3,7 +3,7 @@ import type { BannerImage } from "./BannerImage";
 
 export interface AuthorList {
     image: BannerImage | null;
-    writers: MarkdownInstance<Record<string, any>>[];
-    mainAuthor: MarkdownInstance<Record<string, any>> | null;
-    contributors: MarkdownInstance<Record<string, any>>[];
+    writers: MarkdownInstance[];
+    mainAuthor: MarkdownInstance | null;
+    contributors: MarkdownInstance[];
 };

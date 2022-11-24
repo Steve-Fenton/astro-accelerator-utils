@@ -3,23 +3,23 @@
  */
 /**
  * Sorts by the pubDate field
- * @param {MarkdownInstance<Record<string, any>>} a
- * @param {MarkdownInstance<Record<string, any>>} b
+ * @param {MarkdownInstance} a
+ * @param {MarkdownInstance} b
  * @returns {any}
  */
-export function sortByPubDate(a: any, b: any): any;
+export function sortByPubDate(a: MarkdownInstance, b: MarkdownInstance): any;
 /**
  * Sorts by the pubDate field in descending order
- * @param {MarkdownInstance<Record<string, any>>} a
- * @param {MarkdownInstance<Record<string, any>>} b
+ * @param {MarkdownInstance} a
+ * @param {MarkdownInstance} b
  * @returns {any}
  */
-export function sortByPubDateDesc(a: any, b: any): any;
+export function sortByPubDateDesc(a: MarkdownInstance, b: MarkdownInstance): any;
 /**
  * Sorts by the modDate field
- * @param {MarkdownInstance<Record<string, any>>} a
- * @param {MarkdownInstance<Record<string, any>>} b
+ * @param {MarkdownInstance} a
+ * @param {MarkdownInstance} b
  * @returns {any}
  */
-export function sortByModDate(a: any, b: any): any;
-export type MarkdownInstance = any;
+export function sortByModDate(a: MarkdownInstance, b: MarkdownInstance): any;
+export type MarkdownInstance = import("../types/Astro").MarkdownInstance;

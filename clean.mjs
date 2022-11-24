@@ -9,6 +9,7 @@ const files = [
     '/lib/dates.d.mts',
     '/lib/postFiltering.d.mts',
     '/lib/postOrdering.d.mts',
+    '/lib/postPaging.d.mts',
     '/lib/postQueries.d.mts',
     '/lib/urls.d.mts',
     '/types/Astro.d.ts',
