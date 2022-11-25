@@ -16,7 +16,17 @@ test('formatDate: Date formatted', () => {
         .toBe('Thursday, June 30, 2022')
 });
 
+test('formatDate: Null date handled', () => {
+    expect(Dates.formatDate({}, lang, site))
+        .toBe('')
+});
+
 test('formatModifiedDate: Date formatted', () => {
     expect(Dates.formatModifiedDate(frontmatter, lang, site))
         .toBe('Tuesday, January 31, 2023')
+});
+
+test('formatModifiedDate: Null date handled', () => {
+    expect(Dates.formatModifiedDate({}, lang, site))
+        .toBe('')
 });

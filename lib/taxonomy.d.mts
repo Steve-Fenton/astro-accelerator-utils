@@ -1,4 +1,5 @@
 /**
+ * @typedef { import("../types/Site").Site } Site
  * @typedef { import("../types/Taxonomy").Taxonomy } Taxonomy
  * @typedef { import("../types/Taxonomy").TaxonomyEntry } TaxonomyEntry
  * @typedef { import("../types/Taxonomy").TaxonomyLinks } TaxonomyLinks
@@ -24,6 +25,7 @@ export function taxonomyLinks(translations: any, lang: (entry: any) => string, s
  * @returns {Promise<Taxonomy}
  */
 export function getTaxonomy(): Promise<Taxonomy>;
+export type Site = import("../types/Site").Site;
 export type Taxonomy = import("../types/Taxonomy").Taxonomy;
 export type TaxonomyEntry = import("../types/Taxonomy").TaxonomyEntry;
 export type TaxonomyLinks = import("../types/Taxonomy").TaxonomyLinks;

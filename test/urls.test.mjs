@@ -14,6 +14,11 @@ test('addSlashToAddress: External address not modified', () => {
         .toBe('https://www.external-site.com/test/address')
 });
 
+test('addSlashToAddress: Empty address handled', () => {
+    expect(Urls.addSlashToAddress('', site))
+        .toBe('/')
+});
+
 test('addSlashToUrl: Add slash to URL address', () => {
     expect(Urls.addSlashToUrl(new URL('https://www.example.com/test/address'), site).pathname)
         .toBe('/test/address/')
