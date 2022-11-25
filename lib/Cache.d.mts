@@ -22,4 +22,9 @@ export function getItem(key: string): Promise<any>;
  * @returns {Promise<void>}
  */
 export function setItem(key: string, value: any): Promise<void>;
+/**
+ * Clears the cache
+ * @returns {Promise<void>}
+ */
+export function clear(): Promise<void>;
 export const maxAge: 200;

@@ -3,7 +3,6 @@ import * as PostFiltering from './lib/postFiltering.mjs';
 import * as PostOrdering from './lib/postOrdering.mjs';
 import * as PostPaging from './lib/postPaging.mjs';
 import * as Cache from './lib/cache.mjs';
-import * as Config from './lib/config.mjs';
 import * as Dates from './lib/dates.mjs';
 import * as FooterMenu from './lib/footerMenu.mjs';
 import * as Markdown from './lib/markdown.mjs';
@@ -17,7 +16,6 @@ export {
     PostOrdering,
     PostPaging,
     Cache,
-    Config,
     Dates,
     FooterMenu,
     Markdown,
