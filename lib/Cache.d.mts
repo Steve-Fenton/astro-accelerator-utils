@@ -12,9 +12,10 @@ export function getItemPath(key: string): Promise<string>;
 /**
  * Gets an item from the cache
  * @param {string} key
+ * @param {number} [maxAgeInSeconds]
  * @returns {Promise<any>}
  */
-export function getItem(key: string): Promise<any>;
+export function getItem(key: string, maxAgeInSeconds?: number): Promise<any>;
 /**
  * Adds an item to the cache
  * @param {string} key
@@ -27,4 +28,3 @@ export function setItem(key: string, value: any): Promise<void>;
  * @returns {Promise<void>}
  */
 export function clear(): Promise<void>;
-export const maxAge: 200;

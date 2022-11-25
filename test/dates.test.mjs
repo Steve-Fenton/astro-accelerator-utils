@@ -1,7 +1,6 @@
-import {jest} from '@jest/globals';
 import * as Dates from '../lib/dates.mjs';
 
-const frontmatter = { pubDate: new Date(2022, 5, 30) };
+const frontmatter = { pubDate: new Date(2022, 5, 30), modDate: new Date(2023, 0, 31) };
 const lang = 'en';
 const site = {
     dateOptions: {
@@ -12,7 +11,12 @@ const site = {
 	}
 }
 
-test('Date test', () => {
+test('formatDate: Date formatted', () => {
     expect(Dates.formatDate(frontmatter, lang, site))
         .toBe('Thursday, June 30, 2022')
-})
+});
+
+test('formatModifiedDate: Date formatted', () => {
+    expect(Dates.formatModifiedDate(frontmatter, lang, site))
+        .toBe('Tuesday, January 31, 2023')
+});
