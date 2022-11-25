@@ -1,9 +1,9 @@
 /**
  * Fetches pages
  * @param {PagePredicate} [filter]
- * @returns {Promise<MarkdownInstance}
+ * @returns {Promise<MarkdownInstance[]>}
  */
-export function getPages(filter?: PagePredicate): Promise<MarkdownInstance>;
+export function getPages(filter?: PagePredicate): Promise<MarkdownInstance[]>;
 /**
  *
  * @param {Site} site
