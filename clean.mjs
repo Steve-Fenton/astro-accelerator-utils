@@ -6,6 +6,7 @@ const workingFolder = process.cwd();
 const files = [
     'index.d.mts',
     '/lib/cache.d.mts',
+    '/lib/config.d.mts',
     '/lib/dates.d.mts',
     '/lib/footerMenu.d.mts',
     '/lib/navigation.d.mts',
