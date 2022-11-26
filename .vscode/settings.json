@@ -14,5 +14,7 @@
         "+",
         "1.",
         "1)"
-    ]
+    ],
+    "jest.jestCommandLine": "npm run test --",
+    "jest.showCoverageOnLoad": true
 }

@@ -1,12 +1,12 @@
 import * as PostQuery from '../lib/postQueries.mjs';
 import * as Cache from '../lib/cache.mjs';
 
-beforeEach(() => {
-    Cache.clear();
+beforeEach(async () => {
+    await Cache.clear();
 });
 
-afterAll(() => {
-    Cache.clear();
+afterAll(async () => {
+    await Cache.clear();
 });
 
 PostQuery.injectFetchAll(testFetchAll);

@@ -1,6 +1,10 @@
 import * as PostQuery from '../lib/postQueries.mjs';
 import * as Cache from '../lib/cache.mjs';
 
+/**
+ * @typedef { import("../types/Astro").MarkdownInstance } MarkdownInstance
+ */
+
 beforeEach(() => {
     Cache.clear();
 });
@@ -19,12 +23,18 @@ test('getAuthors: Authors are obtained', async () => {
     expect(authors.mainAuthor.frontmatter.title).toBe('Steve Fenton');
 });
 
+test('getAuthorInfo: Author is obtained', async () => {
+    const author = await PostQuery.getAuthorInfo('steve-fenton');
+
+    expect(author.frontmatter.title).toBe('Steve Fenton');
+});
+
 /** Test Data */
 
 function testFetchAll() {
     console.log('testFetchAll');
 
-    /** @type {import('../types/Astro.js').MarkdownInstance[]} */
+    /** @type {MarkdownInstance[]} */
     const testData = [{
         url: '/test',
         frontmatter: {
