@@ -1,11 +1,16 @@
 /**
+ * Replaces the import.meta.glob function
+ * @param {() => MarkdownInstance[]} postFunction
+ */
+export function injectFetchAll(postFunction: () => MarkdownInstance[]): void;
+/**
  * Fetches pages
  * @param {PagePredicate} [filter]
  * @returns {Promise<MarkdownInstance[]>}
  */
 export function getPages(filter?: PagePredicate): Promise<MarkdownInstance[]>;
 /**
- *
+ * Fetches top-level pages
  * @param {Site} site
  * @param {PagePredicate} [filter]
  * @returns {Promise<MarkdownInstance[]>}
