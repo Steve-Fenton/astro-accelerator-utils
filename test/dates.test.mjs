@@ -1,32 +1,35 @@
-import * as Dates from '../lib/dates.mjs';
+import { DateFormatter } from '../lib/v1/dates.mjs';
 
-const frontmatter = { pubDate: new Date(2022, 5, 30), modDate: new Date(2023, 0, 31) };
-const lang = 'en';
-const site = {
-    dateOptions: {
+describe('Dates', () => {
+    /** @type {Intl.DateTimeFormatOptions} */
+    const defaultDateOptions = {
 		weekday: 'long',
 		year: 'numeric',
 		month: 'long',
 		day: 'numeric',
-	}
-}
+	};
 
-test('formatDate: Date formatted', () => {
-    expect(Dates.formatDate(frontmatter, lang, site))
-        .toBe('Thursday, June 30, 2022')
-});
+    test('Dates are formatted correctly', () => {
+        const dateFormatter = new DateFormatter(defaultDateOptions);
 
-test('formatDate: Null date handled', () => {
-    expect(Dates.formatDate({}, lang, site))
-        .toBe('')
-});
+        const formattedDate = dateFormatter.formatDate(new Date(2022, 5, 30), 'en');
 
-test('formatModifiedDate: Date formatted', () => {
-    expect(Dates.formatModifiedDate(frontmatter, lang, site))
-        .toBe('Tuesday, January 31, 2023')
-});
+        expect(formattedDate).toBe('Thursday, June 30, 2022');
+    });
 
-test('formatModifiedDate: Null date handled', () => {
-    expect(Dates.formatModifiedDate({}, lang, site))
-        .toBe('')
+    test('Dates are formatted correctly', () => {
+        const dateFormatter = new DateFormatter(defaultDateOptions);
+
+        const formattedDate = dateFormatter.formatDate(new Date(2022, 5, 30), 'fr');
+
+        expect(formattedDate).toBe('jeudi 30 juin 2022');
+    });
+
+    test('Null dates are handled', () => {
+        const dateFormatter = new DateFormatter(defaultDateOptions);
+
+        const formattedDate = dateFormatter.formatDate(null, 'en');
+
+        expect(formattedDate).toBe('');
+    });
 });

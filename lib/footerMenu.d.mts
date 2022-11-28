@@ -12,9 +12,9 @@
  * @param {any} translations
  * @param {Site} site
  * @param {(NavPage | 'categories' | 'tags' | 'toptags')[]} menu
- * @returns {NavPage[]}
+ * @returns {Promise<NavPage[]>}
  */
-export function getMenu(currentUrl: URL, _: TranslationProvider, translations: any, site: any, menu: (NavPage | 'categories' | 'tags' | 'toptags')[]): NavPage[];
+export function getMenu(currentUrl: URL, _: TranslationProvider, translations: any, site: any, menu: (NavPage | 'categories' | 'tags' | 'toptags')[]): Promise<NavPage[]>;
 /**
  *
  * @param {TaxonomyLinks} links

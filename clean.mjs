@@ -5,8 +5,10 @@ const workingFolder = process.cwd();
 
 const files = [
     'index.d.mts',
-    '/lib/cache.d.mts',
-    '/lib/dates.d.mts',
+    '/lib/v1/dates.d.mts',
+    '/lib/v1/urls.d.mts',
+    '/lib/v1/posts.d.mts',
+
     '/lib/footerMenu.d.mts',
     '/lib/navigation.d.mts',
     '/lib/markdown.d.mts',
@@ -15,6 +17,7 @@ const files = [
     '/lib/postPaging.d.mts',
     '/lib/postQueries.d.mts',
     '/lib/taxonomy.d.mts',
+    '/lib/cache.d.mts',
     '/lib/urls.d.mts',
     '/types/Astro.d.ts',
     '/types/AuthorInfo.d.ts',

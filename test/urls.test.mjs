@@ -1,25 +1,42 @@
-import * as Urls from '../lib/urls.mjs';
+import { UrlFormatter } from '../lib/v1/urls.mjs';
 
-const site = {
-    url: 'https://www.example.com'
-};
+describe('Url formatting', () =>{
+    const testSiteUrl = 'https://www.example.com';
+    const urlFormatter = new UrlFormatter(testSiteUrl);
 
-test('addSlashToAddress: Add slash to string address', () => {
-    expect(Urls.addSlashToAddress('/test/address', site))
-        .toBe('/test/address/')
-});
+    test('A slash is added to string address', () => {
+        const formattedUrl = urlFormatter.addSlashToAddress('/test/address');
 
-test('addSlashToAddress: External address not modified', () => {
-    expect(Urls.addSlashToAddress('https://www.external-site.com/test/address', site))
-        .toBe('https://www.external-site.com/test/address')
-});
+        expect(formattedUrl).toBe('/test/address/')
+    });
+    
+    test('An external address is not modified', () => {
+        const formattedUrl = urlFormatter.addSlashToAddress('https://www.external-site.com/test/address');
+        
+        expect(formattedUrl).toBe('https://www.external-site.com/test/address')
+    });
+    
+    test('An empty address is handled', () => {
+        const formattedUrl = urlFormatter.addSlashToAddress('');
 
-test('addSlashToAddress: Empty address handled', () => {
-    expect(Urls.addSlashToAddress('', site))
-        .toBe('/')
-});
+        expect(formattedUrl).toBe('/')
+    });
 
-test('addSlashToUrl: Add slash to URL address', () => {
-    expect(Urls.addSlashToUrl(new URL('https://www.example.com/test/address'), site).pathname)
-        .toBe('/test/address/')
+    test('An undefined address is handled', () => {
+        const formattedUrl = urlFormatter.addSlashToAddress();
+
+        expect(formattedUrl).toBe('/')
+    });
+    
+    test('A slash is added to a URL address', () => {
+        const formattedUrl = urlFormatter.addSlashToUrl(new URL('https://www.example.com/test/address')).pathname;
+        
+        expect(formattedUrl).toBe('/test/address/')
+    });
+
+    test('An undefined URL is handled', () => {
+        const formattedUrl = urlFormatter.addSlashToUrl().pathname;
+        
+        expect(formattedUrl).toBe('/')
+    });
 });

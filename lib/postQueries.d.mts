@@ -1,16 +1,18 @@
 /**
  * Replaces the import.meta.glob function
- * @param {() => MarkdownInstance[]} postFunction
+ * @param {() => MarkdownInstance[]} fetcher
  */
-export function injectFetchAll(postFunction: () => MarkdownInstance[]): void;
+export function injectFetchAll(fetcher: () => MarkdownInstance[]): void;
 /**
- * Fetches pages
+ * Replaced by Posts.all()
+ * Use Posts.all().filter(...) to filter results
  * @param {PagePredicate} [filter]
  * @returns {Promise<MarkdownInstance[]>}
  */
 export function getPages(filter?: PagePredicate): Promise<MarkdownInstance[]>;
 /**
- * Fetches top-level pages
+ * Replaced by Posts.root()
+ * Use Posts.root().filter(...) to filter results
  * @param {Site} site
  * @param {PagePredicate} [filter]
  * @returns {Promise<MarkdownInstance[]>}
@@ -23,7 +25,7 @@ export function getTopLevelPages(site: Site, filter?: PagePredicate): Promise<Ma
  */
 export function getAuthors(frontmatter: Frontmatter): Promise<AuthorList>;
 /**
- *
+ * Get a single author by id/slug
  * @param {string} slug
  * @returns {Promise<AuthorInfo>}
  */
