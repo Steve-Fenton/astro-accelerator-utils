@@ -7,13 +7,12 @@ import * as Cache from '../lib/cache.mjs';
 
 beforeEach(() => {
     Cache.clear();
+    PostQuery.injectFetchAll(testFetchAll);
 });
 
 afterAll(() => {
     Cache.clear();
 });
-
-PostQuery.injectFetchAll(testFetchAll);
 
 test('getAuthors: Authors are obtained', async () => {
     const frontmatter = { authors: ['steve-fenton'] };
