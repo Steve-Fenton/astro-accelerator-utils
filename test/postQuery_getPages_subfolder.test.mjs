@@ -51,7 +51,7 @@ function testFetchAll() {
         frontmatter: {
             layout: 'src/layouts/Redirect.astro',
             title: 'Test redirect',
-            location: 'https://www.example.com/'
+            redirect: 'https://www.example.com/'
         }
     },{
         url: '/subfolder/test2',
