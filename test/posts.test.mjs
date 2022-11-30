@@ -1,8 +1,13 @@
+import { Cache } from '../lib/v1/cache.mjs';
 import { Posts } from '../lib/v1/posts.mjs';
 
 describe('Posts.All', () => {
+
+    // Zero-length cache
+    const cache = new Cache(0);
+
     test('Gets all posts', () => {
-        const posts = new Posts(fetchAll);
+        const posts = new Posts(cache, fetchAll);
 
         const result = posts.all();
         const homePage = result.filter(p => p.frontmatter.navTitle === 'Home')[0];
@@ -11,28 +16,9 @@ describe('Posts.All', () => {
         expect(homePage.file).toBe('C:/Users/steve/repos/astro-accelerator/src/pages/index.md')
     });
 
-    test('Avoids double hit on file system', () => {
-        const calls = 0;
-        const fetchAllMock = function() {
-            if (calls === 0) {
-                return [{}];
-            } else {
-                throw new Error('fetchAllMock called twice');
-            }
-        }
-
-        const posts = new Posts(fetchAllMock);
-        const result1 = posts.all();
-        // If there is a second call to fetchAllMock it will throw an error
-        const result2 = posts.all();
-
-        expect(result1.length).toBe(1);
-        expect(result2.length).toBe(1);
-    });
-
     test('Top level pages (default', () => {
         const subfolder = '';
-        const posts = new Posts(fetchAll);
+        const posts = new Posts(cache, fetchAll);
 
         const result = posts.root(subfolder);
 
@@ -64,7 +50,7 @@ describe('Posts.All', () => {
 
     test('Top level pages for subfolder site (i.e. /blog)', () => {
         const subfolder = '/about';
-        const posts = new Posts(fetchAllSubfolderVersion);
+        const posts = new Posts(cache, fetchAllSubfolderVersion);
 
         const result = posts.root(subfolder);
 

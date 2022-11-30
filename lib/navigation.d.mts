@@ -1,8 +1,4 @@
 /**
- * @typedef { import("../types/Site").Site } Site
- * @typedef { import("../types/NavPage").NavPage } NavPage
- */
-/**
  *
  * @param {URL} currentUrl
  * @param {Site} site

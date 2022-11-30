@@ -1,14 +1,16 @@
 /**
  * @typedef { import("../../types/Astro").MarkdownInstance } MarkdownInstance
+ * @typedef { import("./cache.mjs").Cache } Cache
  */
 export class Posts {
     /**
      * Constructor
+     * @param {Cache} cache
      * @param {() => MarkdownInstance[]} [fetchAll]
      */
-    constructor(fetchAll?: () => MarkdownInstance[]);
+    constructor(cache: Cache, fetchAll?: () => MarkdownInstance[]);
+    cache: import("./cache.mjs").Cache;
     fetchAll: () => any;
-    allPosts: any[];
     /**
      * Gets all markdown posts in the site
      * @returns {MarkdownInstance[]}
@@ -21,3 +23,4 @@ export class Posts {
     root(subfolder: any): MarkdownInstance[];
 }
 export type MarkdownInstance = import("../../types/Astro").MarkdownInstance;
+export type Cache = import("./cache.mjs").Cache;

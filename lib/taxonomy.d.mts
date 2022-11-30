@@ -1,11 +1,4 @@
 /**
- * @typedef { import("../types/Site").Site } Site
- * @typedef { import("../types/Taxonomy").Taxonomy } Taxonomy
- * @typedef { import("../types/Taxonomy").TaxonomyEntry } TaxonomyEntry
- * @typedef { import("../types/Taxonomy").TaxonomyLinks } TaxonomyLinks
- * @typedef { import("../types/Astro").MarkdownInstance } MarkdownInstance
- */
-/**
  *
  * @param {TaxonomyEntry} a
  * @param {TaxonomyEntry} b

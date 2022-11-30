@@ -21,6 +21,7 @@ export type Site = {
     pageSize: number;
     pageLinks: number;
     rssLimit: number;
+    cacheMaxAge: number;
     featureFlags: {
       codeBlocks: 'copy'[],
       figures: 'enlarge'[],

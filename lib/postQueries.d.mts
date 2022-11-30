@@ -1,9 +1,4 @@
 /**
- * Replaces the import.meta.glob function
- * @param {() => MarkdownInstance[]} fetcher
- */
-export function injectFetchAll(fetcher: () => MarkdownInstance[]): void;
-/**
  * Replaced by Posts.all()
  * @deprecated Use Posts.all().filter(...) to filter results
  * @param {PagePredicate} [filter]
