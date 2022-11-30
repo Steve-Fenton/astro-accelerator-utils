@@ -17,12 +17,20 @@ describe('Dates', () => {
         expect(formattedDate).toBe('Thursday, June 30, 2022');
     });
 
-    test('Dates are formatted correctly', () => {
+    test('Dates are formatted correctly in another language', () => {
         const dateFormatter = new DateFormatter(defaultDateOptions);
 
         const formattedDate = dateFormatter.formatDate(new Date(2022, 5, 30), 'fr');
 
         expect(formattedDate).toBe('jeudi 30 juin 2022');
+    });
+
+    test('String dates are formatted correctly', () => {
+        const dateFormatter = new DateFormatter(defaultDateOptions);
+
+        const formattedDate = dateFormatter.formatDate('2022-06-30', 'en');
+
+        expect(formattedDate).toBe('Thursday, June 30, 2022');
     });
 
     test('Null dates are handled', () => {

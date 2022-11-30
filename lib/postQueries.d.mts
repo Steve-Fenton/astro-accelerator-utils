@@ -5,14 +5,14 @@
 export function injectFetchAll(fetcher: () => MarkdownInstance[]): void;
 /**
  * Replaced by Posts.all()
- * Use Posts.all().filter(...) to filter results
+ * @deprecated Use Posts.all().filter(...) to filter results
  * @param {PagePredicate} [filter]
  * @returns {Promise<MarkdownInstance[]>}
  */
 export function getPages(filter?: PagePredicate): Promise<MarkdownInstance[]>;
 /**
  * Replaced by Posts.root()
- * Use Posts.root().filter(...) to filter results
+ * @deprecated Use Posts.root().filter(...) to filter results
  * @param {Site} site
  * @param {PagePredicate} [filter]
  * @returns {Promise<MarkdownInstance[]>}

@@ -10,11 +10,10 @@ export class DateFormatter {
     dateOptions: Intl.DateTimeFormatOptions;
     /**
      * Returns the formatted pubDate
-     * @param {any} frontmatter
+     * @param {string | Date} date
      * @param {string} lang
-     * @param {Site} site
      * @returns {string}
      */
-    formatDate(date: any, lang: string): string;
+    formatDate(date: string | Date, lang: string): string;
 }
 export type Site = any;

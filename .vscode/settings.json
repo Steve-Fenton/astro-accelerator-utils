@@ -1,5 +1,6 @@
 {
     "explorer.fileNesting.enabled": true,
+    "explorer.fileNesting.expand": false,
     "explorer.fileNesting.patterns": {
         "*.mjs": "${capture}.d.mts",
         "*.ts": "${capture}.d.ts",
