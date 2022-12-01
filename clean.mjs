@@ -1,4 +1,4 @@
-import fs, { existsSync } from 'fs';
+import fs from 'fs';
 import path from 'path';
 
 const workingFolder = process.cwd();
@@ -10,6 +10,7 @@ const files = [
     '/lib/v1/dates.d.mts',
     '/lib/v1/markdown.d.mts',
     '/lib/v1/navigation.d.mts',
+    '/lib/v1/paging.d.mts',
     '/lib/v1/posts.d.mts',
     '/lib/v1/urls.d.mts',
 

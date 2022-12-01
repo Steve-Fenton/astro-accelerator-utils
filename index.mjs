@@ -3,6 +3,7 @@ import { Cache } from './lib/v1/cache.mjs';
 import { DateFormatter } from './lib/v1/dates.mjs';
 import { Markdown } from './lib/v1/markdown.mjs';
 import { Navigation } from './lib/v1/navigation.mjs';
+import { Paging } from './lib/v1/paging.mjs';
 import { Posts } from './lib/v1/posts.mjs';
 import { UrlFormatter } from './lib/v1/urls.mjs';
 
@@ -18,6 +19,7 @@ export {
     DateFormatter,
     Markdown,
     Navigation,
+    Paging,
     Posts,
     UrlFormatter,
     PostFiltering,
