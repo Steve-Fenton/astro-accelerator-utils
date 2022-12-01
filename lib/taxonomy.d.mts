@@ -15,7 +15,7 @@ export function sortByTitle(a: TaxonomyEntry, b: TaxonomyEntry): 0 | 1 | -1;
 export function taxonomyLinks(translations: any, lang: (entry: any) => string, site: Site): TaxonomyLinks;
 /**
  *
- * @returns {Promise<Taxonomy}
+ * @returns {Promise<Taxonomy>}
  */
 export function getTaxonomy(): Promise<Taxonomy>;
 export type Site = import("../types/Site").Site;
