@@ -9,7 +9,6 @@ import { UrlFormatter } from './lib/v1/urls.mjs';
 
 import * as PostFiltering from './lib/postFiltering.mjs';
 import * as PostOrdering from './lib/postOrdering.mjs';
-import * as PostPaging from './lib/postPaging.mjs';
 import * as FooterMenu from './lib/footerMenu.mjs';
 import * as Taxonomy from './lib/taxonomy.mjs';
 
@@ -24,7 +23,6 @@ export {
     UrlFormatter,
     PostFiltering,
     PostOrdering,
-    PostPaging,
     FooterMenu,
     Taxonomy
 };
