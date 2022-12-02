@@ -2,7 +2,7 @@ export interface TaxonomyEntry {
     title: string;
     count: number;
 }
-export interface Taxonomy {
+export interface TaxonomyList {
     tags: TaxonomyEntry[];
     topTags: TaxonomyEntry[];
     categories: TaxonomyEntry[];

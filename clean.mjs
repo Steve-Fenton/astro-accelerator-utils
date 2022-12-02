@@ -12,6 +12,7 @@ const files = [
     '/lib/v1/navigation.d.mts',
     '/lib/v1/paging.d.mts',
     '/lib/v1/posts.d.mts',
+    '/lib/v1/taxonomy.d.mts',
     '/lib/v1/urls.d.mts',
 
     '/lib/footerMenu.d.mts',
