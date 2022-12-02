@@ -1,11 +1,12 @@
-import { Cache } from '../lib/v1/cache.mjs';
+import { Accelerator } from '../index.mjs'
 
 describe('Cache', () => {
 
     test('Recommended cache use', () => {
-        const cache = new Cache(10);
+        const site = { cacheMaxAge: 10 };
+        const accelerator = new Accelerator(site);
 
-        const item = cache.get('test-1', () => {
+        const item = accelerator.cache.get('test-1', () => {
             return { value: 7 };
         });
 
@@ -13,7 +14,8 @@ describe('Cache', () => {
     });
 
     test('Recommended use only calls function once', () => {
-        const cache = new Cache(10);
+        const site = { cacheMaxAge: 10 };
+        const accelerator = new Accelerator(site);
 
         const calls = 0;
         const fetchAllMock = function() {
@@ -24,30 +26,32 @@ describe('Cache', () => {
             }
         }
 
-        const item1 = cache.get('mock-test', fetchAllMock);
-        const item2 = cache.get('mock-test', fetchAllMock);
+        const item1 = accelerator.cache.get('mock-test', fetchAllMock);
+        const item2 = accelerator.cache.get('mock-test', fetchAllMock);
 
         expect(item1.length).toBe(1);
         expect(item2.length).toBe(1);
     });
 
     test('Items set and retrieved', () => {
-        const cache = new Cache(10);
+        const site = { cacheMaxAge: 10 };
+        const accelerator = new Accelerator(site);
 
-        cache.setItem('test-1', { value: 2 });
+        accelerator.cache.setItem('test-1', { value: 2 });
 
-        const item = cache.getItem('test-1');
+        const item = accelerator.cache.getItem('test-1');
 
         expect(item.value).toBe(2);
     });
 
     test('Cache clears', () => {
-        const cache = new Cache(10);
+        const site = { cacheMaxAge: 10 };
+        const accelerator = new Accelerator(site);
 
-        cache.setItem('test-2', { value: 2 });
-        cache.clear();
+        accelerator.cache.setItem('test-2', { value: 2 });
+        accelerator.cache.clear();
 
-        const item = cache.getItem('test-2');
+        const item = accelerator.cache.getItem('test-2');
 
         expect(item).toBe(null);
     });

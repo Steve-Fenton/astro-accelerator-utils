@@ -1,13 +1,13 @@
-import { Markdown } from '../lib/v1/markdown.mjs';
+import { Accelerator } from '../index.mjs';
 
 describe('Markdown', () => {
     
-    const markdown = new Markdown();
+    const accelerator = new Accelerator({});
 
     test('Markdown processed', async () => {
         const input = `Test _some_ markdown`;
 
-        const output = await markdown.getHtmlFrom(input);
+        const output = await accelerator.markdown.getHtmlFrom(input);
 
         expect(output).toBe('<p>Test <em>some</em> markdown</p>');
     });
@@ -15,7 +15,7 @@ describe('Markdown', () => {
     test('Inline markdown processed without wrapping element', async () => {
         const input = `Test _some_ markdown`;
 
-        const output = await markdown.getInlineHtmlFrom(input);
+        const output = await accelerator.markdown.getInlineHtmlFrom(input);
 
         expect(output).toBe('Test <em>some</em> markdown');
     });
@@ -23,7 +23,7 @@ describe('Markdown', () => {
     test('Inline markdown with quote not impacted by inline-ness', async () => {
         const input = `> Test _some_ markdown`;
 
-        const output = await markdown.getInlineHtmlFrom(input);
+        const output = await accelerator.markdown.getInlineHtmlFrom(input);
 
         expect(output).toBe('<blockquote>\n<p>Test <em>some</em> markdown</p>\n</blockquote>');
     });
@@ -31,7 +31,7 @@ describe('Markdown', () => {
     test('Text processed', async () => {
         const input = `Test _some_ markdown`;
 
-        const output = await markdown.getTextFrom(input);
+        const output = await accelerator.markdown.getTextFrom(input);
 
         expect(output).toBe('Test some markdown');
     });

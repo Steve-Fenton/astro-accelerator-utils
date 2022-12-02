@@ -1,4 +1,4 @@
-import { DateFormatter } from '../lib/v1/dates.mjs';
+import { Accelerator } from '../index.mjs';
 
 describe('Dates', () => {
     /** @type {Intl.DateTimeFormatOptions} */
@@ -10,33 +10,37 @@ describe('Dates', () => {
 	};
 
     test('Dates are formatted correctly', () => {
-        const dateFormatter = new DateFormatter(defaultDateOptions);
+        const site = { dateOptions: defaultDateOptions };
+        const accelerator = new Accelerator(site);
 
-        const formattedDate = dateFormatter.formatDate(new Date(2022, 5, 30), 'en');
+        const formattedDate = accelerator.dateFormatter.formatDate(new Date(2022, 5, 30), 'en');
 
         expect(formattedDate).toBe('Thursday, June 30, 2022');
     });
 
     test('Dates are formatted correctly in another language', () => {
-        const dateFormatter = new DateFormatter(defaultDateOptions);
+        const site = { dateOptions: defaultDateOptions };
+        const accelerator = new Accelerator(site);
 
-        const formattedDate = dateFormatter.formatDate(new Date(2022, 5, 30), 'fr');
+        const formattedDate = accelerator.dateFormatter.formatDate(new Date(2022, 5, 30), 'fr');
 
         expect(formattedDate).toBe('jeudi 30 juin 2022');
     });
 
     test('String dates are formatted correctly', () => {
-        const dateFormatter = new DateFormatter(defaultDateOptions);
+        const site = { dateOptions: defaultDateOptions };
+        const accelerator = new Accelerator(site);
 
-        const formattedDate = dateFormatter.formatDate('2022-06-30', 'en');
+        const formattedDate = accelerator.dateFormatter.formatDate('2022-06-30', 'en');
 
         expect(formattedDate).toBe('Thursday, June 30, 2022');
     });
 
     test('Null dates are handled', () => {
-        const dateFormatter = new DateFormatter(defaultDateOptions);
+        const site = { dateOptions: defaultDateOptions };
+        const accelerator = new Accelerator(site);
 
-        const formattedDate = dateFormatter.formatDate(null, 'en');
+        const formattedDate = accelerator.dateFormatter.formatDate(null, 'en');
 
         expect(formattedDate).toBe('');
     });
