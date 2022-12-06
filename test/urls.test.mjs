@@ -2,7 +2,8 @@ import { Accelerator } from '../index.mjs';
 
 describe('Url formatting', () =>{
     const site = {
-        url: 'https://www.example.com'
+        url: 'https://www.example.com',
+        subfolder: ''
     }
 
     test('A slash is added to string address', () => {
@@ -51,5 +52,31 @@ describe('Url formatting', () =>{
         const formattedUrl = accelerator.urlFormatter.addSlashToUrl().pathname;
         
         expect(formattedUrl).toBe('/')
+    });
+
+    test('Author id is retrieved', () => {
+        const testSite = {
+            url: 'https://www.example.com',
+            subfolder: ''
+        }
+
+        const accelerator = new Accelerator(testSite);
+
+        const id = accelerator.urlFormatter.getAuthorId(new URL('https://www.example.com/author/steve-fenton/'));
+
+        expect(id).toBe('steve-fenton');
+    });
+
+    test('Author id is retrieved with subfolder', () => {
+        const testSite = {
+            url: 'https://www.example.com',
+            subfolder: 'example'
+        }
+
+        const accelerator = new Accelerator(testSite);
+
+        const id = accelerator.urlFormatter.getAuthorId(new URL('https://www.example.com/example/author/steve-fenton/'));
+
+        expect(id).toBe('steve-fenton');
     });
 });

@@ -9,6 +9,7 @@ export class Accelerator {
     cacheMaxAge: number;
     dateOptions: Intl.DateTimeFormatOptions;
     siteUrl: string;
+    subfolder: string;
     get authors(): Authors;
     get cache(): Cache;
     get dateFormatter(): DateFormatter;

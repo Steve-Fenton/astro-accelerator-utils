@@ -2,9 +2,11 @@ export class UrlFormatter {
     /**
      * Constructor
      * @param {string} siteUrl
+     * @param {string} subfolder
      */
-    constructor(siteUrl: string);
+    constructor(siteUrl: string, subfolder: string);
     siteUrl: string;
+    subfolder: string;
     /**
      * Ensures trailing slash is used
      * @param {URL} url
@@ -17,4 +19,9 @@ export class UrlFormatter {
      * @returns {string}
      */
     addSlashToAddress(address: string | undefined): string;
+    /**
+     * Gets the author id from an address
+     * @param {URL} url
+     */
+    getAuthorId(url: URL): string;
 }
