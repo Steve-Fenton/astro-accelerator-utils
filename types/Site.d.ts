@@ -23,6 +23,9 @@ export type Site = {
     rssLimit: number;
     cacheMaxAge: number;
     featureFlags: {
+        stickyNav: {
+            top: number;
+        };
         codeBlocks: 'copy'[];
         figures: 'enlarge'[];
         youTubeLinks: 'embed'[];
