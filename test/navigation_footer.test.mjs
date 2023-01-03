@@ -4,7 +4,7 @@ import { Posts } from '../lib/v1/posts.mjs';
 import { Taxonomy } from '../lib/v1/taxonomy.mjs';
 import { UrlFormatter } from '../lib/v1/urls.mjs';
 
-import { fetchAll } from './data/featchAllMock.mjs';
+import { fetchAll } from './data/fetchAllMock.mjs';
 
 describe('Navigation.footer', () => {
 

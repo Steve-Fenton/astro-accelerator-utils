@@ -3,7 +3,7 @@ import { Navigation } from '../lib/v1/navigation.mjs';
 import { Posts } from '../lib/v1/posts.mjs';
 import { UrlFormatter } from '../lib/v1/urls.mjs';
 
-import { fetchAll } from './data/featchAllMock.mjs';
+import { fetchAll } from './data/fetchAllMock.mjs';
 import { fetchAllSubfolderVersion } from './data/fetchAllSubfolderMock.mjs';
 
 describe('Navigation.menu', () => {

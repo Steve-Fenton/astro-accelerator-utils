@@ -1,7 +1,7 @@
 import { Cache } from '../lib/v1/cache.mjs';
 import { Posts } from '../lib/v1/posts.mjs';
 
-import { fetchAll } from './data/featchAllMock.mjs';
+import { fetchAll } from './data/fetchAllMock.mjs';
 
 describe('Posts.all', () => {
 
