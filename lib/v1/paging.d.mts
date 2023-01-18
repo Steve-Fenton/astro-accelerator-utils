@@ -1,5 +1,5 @@
 /**
- * @typedef { import("../types/Link").Link } Link
+ * @typedef { import("../../types/Link").Link } Link
  */
 export class Paging {
     /**
@@ -12,4 +12,4 @@ export class Paging {
      */
     links(limit: number, numberOfPages: number, currentPage: number, url: string): Link[];
 }
-export type Link = any;
+export type Link = import("../../types/Link").Link;

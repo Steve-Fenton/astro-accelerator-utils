@@ -20,9 +20,10 @@ export class Navigation {
      * Returns a list of breadcrumbs
      * @param {URL} currentUrl
      * @param {string} subfolder
+     * @param {number} customCount
      * @returns {NavPage[]}
      */
-    breadcrumbs(currentUrl: URL, subfolder: string): NavPage[];
+    breadcrumbs(currentUrl: URL, subfolder: string, customCount: number): NavPage[];
     /**
      *
      * @param {URL} currentUrl
