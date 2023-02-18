@@ -10,6 +10,7 @@ export class Accelerator {
     dateOptions: Intl.DateTimeFormatOptions;
     siteUrl: string;
     subfolder: string;
+    useTrailingUrlSlash: boolean;
     get authors(): Authors;
     get cache(): Cache;
     get dateFormatter(): DateFormatter;
