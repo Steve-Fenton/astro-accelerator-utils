@@ -1,6 +1,7 @@
 export interface Frontmatter {
     layout: string;
 	title: string;
+	titleAdditional?: string;
 	subtitle?: string;
 	pubDate: Date;
 	modDate?: Date;

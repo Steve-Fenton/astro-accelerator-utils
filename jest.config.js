@@ -3,5 +3,7 @@ export default {
       "mjs",
       "js",
     ],
-    testRegex: `test\.mjs$`,
+    testMatch: [
+      "**/*.test.mjs"
+    ],
   };
