@@ -1,5 +1,6 @@
 export type Site = {
     url: string;
+    useTrailingUrlSlash?: boolean;
     dateOptions: Intl.DateTimeFormatOptions;
     subfolder: string;
     feedUrl: string;
@@ -29,6 +30,13 @@ export type Site = {
         codeBlocks: 'copy'[];
         figures: 'enlarge'[];
         youTubeLinks: 'embed'[];
+    };
+    layouts: {
+        default: string;
+        category?: string;
+        tag?: string;
+        author?: string;
+        page?: string;
     };
     images: {
         contentSize: string;
