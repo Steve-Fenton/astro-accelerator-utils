@@ -29,13 +29,6 @@ export type Site = {
       figures: 'enlarge'[],
       youTubeLinks: 'embed'[],
     },
-    layouts: {
-      default: string;
-      category?: string;
-      tag?: string;
-      author?: string;
-      page?: string;
-    },
     images: {
       contentSize: string;
       listerSize: string;
