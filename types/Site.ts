@@ -28,6 +28,7 @@ export type Site = {
       codeBlocks: 'copy'[],
       figures: 'enlarge'[],
       youTubeLinks: 'embed'[],
+      headers: 'link'[],
     },
     images: {
       contentSize: string;
