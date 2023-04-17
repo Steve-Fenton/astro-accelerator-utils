@@ -19,6 +19,8 @@ describe('Navigation.menu', () => {
 
         const result = navigation.menu(url, '', ['auto']);
 
+        console.log(JSON.stringify(result));
+
         expect(result[0].title).toBe('Home');
         expect(result[0].isOpen).toBe(true);
         expect(result[0].ariaCurrent).toBe(false);
