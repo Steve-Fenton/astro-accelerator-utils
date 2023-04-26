@@ -34,6 +34,12 @@ export class Navigation {
     menu(currentUrl: URL, subfolder: string, menu: (NavPage | 'auto')[]): NavPage[];
     /**
      *
+     * @param {NavPage} page
+     * @param {NavPage[]} pageList
+     */
+    getChildren(page: NavPage, pageList: NavPage[]): import("../../types/NavPage").NavPage[];
+    /**
+     *
      * @param {string} subfolder
      * @returns {NavPage[]}
      */

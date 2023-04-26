@@ -21,11 +21,13 @@ describe('Navigation.menu', () => {
 
         console.log(JSON.stringify(result));
 
+        expect(result[0].fullTitle).toBe('Welcome to Astro *Accelerator*');
         expect(result[0].title).toBe('Home');
         expect(result[0].isOpen).toBe(true);
         expect(result[0].ariaCurrent).toBe(false);
 
         // About should be expanded
+        expect(result[1].fullTitle).toBe('About');
         expect(result[1].title).toBe('About');
         expect(result[1].isOpen).toBe(true);
         expect(result[1].ariaCurrent).toBe(false);
@@ -37,22 +39,27 @@ describe('Navigation.menu', () => {
         expect(result[1].children[1].title).toBe('Getting Started');
         expect(result[1].children[1].ariaCurrent).toBe('page');
 
+        expect(result[2].fullTitle).toBe('Features');
         expect(result[2].title).toBe('Features');
         expect(result[2].isOpen).toBe(false);
         expect(result[2].ariaCurrent).toBe(false);
 
+        expect(result[3].fullTitle).toBe('Writing');
         expect(result[3].title).toBe('Writing');
         expect(result[3].isOpen).toBe(false);
         expect(result[3].ariaCurrent).toBe(false);
 
+        expect(result[4].fullTitle).toBe('Articles');
         expect(result[4].title).toBe('Articles');
         expect(result[4].isOpen).toBe(false);
         expect(result[4].ariaCurrent).toBe(false);
 
+        expect(result[5].fullTitle).toBe('Kitchen sink');
         expect(result[5].title).toBe('Kitchen sink');
         expect(result[5].isOpen).toBe(false);
         expect(result[5].ariaCurrent).toBe(false);
 
+        expect(result[6].fullTitle).toBe('Main site');
         expect(result[6].title).toBe('Main site');
         expect(result[6].isOpen).toBe(false);
         expect(result[6].ariaCurrent).toBe(false);

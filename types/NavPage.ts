@@ -1,5 +1,6 @@
 export interface NavPage {
     section?: string;
+    fullTitle: string;
     title: string;
     url: string;
     order: number;
