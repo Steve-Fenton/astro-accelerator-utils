@@ -29,6 +29,7 @@ export type Site = {
       figures: 'enlarge'[],
       youTubeLinks: 'embed'[],
       headers: 'link'[],
+      details: 'tabs'[],
     },
     images: {
       contentSize: string;
