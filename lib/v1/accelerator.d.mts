@@ -11,6 +11,7 @@ export class Accelerator {
     siteUrl: string;
     subfolder: string;
     useTrailingUrlSlash: boolean;
+    captureStatistics: boolean;
     get authors(): Authors;
     get cache(): Cache;
     get dateFormatter(): DateFormatter;
@@ -20,6 +21,7 @@ export class Accelerator {
     get posts(): Posts;
     get taxonomy(): Taxonomy;
     get urlFormatter(): UrlFormatter;
+    get statistics(): typeof StatisticsStub;
 }
 export type Site = import("../../types/Site").Site;
 import { Authors } from "./authors.mjs";
@@ -31,3 +33,4 @@ import { Paging } from "./paging.mjs";
 import { Posts } from "./posts.mjs";
 import { Taxonomy } from "./taxonomy.mjs";
 import { UrlFormatter } from "./urls.mjs";
+import { StatisticsStub } from "./statistics-stub.mjs";

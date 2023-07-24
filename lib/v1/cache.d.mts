@@ -30,9 +30,9 @@ export class Cache {
      */
     clear(): Promise<void>;
     /**
- * Get's the path of the cache files
- * @returns {string}
- */
+     * Get's the path of the cache files
+     * @returns {string}
+     */
     getCachePath(): string;
     /**
      * Gets the file path for a cache item

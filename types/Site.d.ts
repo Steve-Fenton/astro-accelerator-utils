@@ -1,6 +1,7 @@
 export type Site = {
     url: string;
     useTrailingUrlSlash?: boolean;
+    captureStatistics: boolean;
     dateOptions: Intl.DateTimeFormatOptions;
     subfolder: string;
     feedUrl: string;
