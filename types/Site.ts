@@ -30,6 +30,7 @@ export type Site = {
       youTubeLinks: 'embed'[],
       headers: 'link'[],
       details: 'tabs'[],
+      statistics: 'file'[],
     },
     images: {
       contentSize: string;
