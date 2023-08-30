@@ -33,6 +33,7 @@ export type Site = {
         youTubeLinks: 'embed'[];
         headers: 'link'[];
         details: 'tabs'[];
+        search: 'dialog'[];
     };
     images: {
         contentSize: string;
