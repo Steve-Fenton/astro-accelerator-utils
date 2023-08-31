@@ -4,6 +4,7 @@
   "description": "Astro utilities for Astro Accelerator.",
   "main": "index.mjs",
   "type": "module",
+  "packageManager": "pnpm@8.7.0",
   "files": [
     "index.mjs",
     "index.d.mts",
