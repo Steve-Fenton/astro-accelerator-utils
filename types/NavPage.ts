@@ -16,7 +16,7 @@ export interface MenuItem {
     isOpen?: boolean;
     ariaCurrent?: 'page' | false;
     fullTitle?: string;
-    children?: NavPage[];
+    children?: MenuItem[];
     section?: string;
     url?: string;
     rel?: string;
