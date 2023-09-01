@@ -1,10 +1,3 @@
-/**
- * @typedef { import("./posts.mjs").Posts } Posts
- * @typedef { import("./taxonomy.mjs").Taxonomy } Taxonomy
- * @typedef { import("./urls.mjs").UrlFormatter } UrlFormatter
- * @typedef { import("../../types/Astro").MarkdownInstance } MarkdownInstance
- * @typedef { import("../../types/NavPage").NavPage } NavPage
- */
 export class Navigation {
     /**
      * Constructor
@@ -28,10 +21,10 @@ export class Navigation {
      *
      * @param {URL} currentUrl
      * @param {string} subfolder
-     * @param {(NavPage | 'auto')[]} menu
+     * @param {(MenuItem | 'auto')[]} menu
      * @returns {NavPage[]}
      */
-    menu(currentUrl: URL, subfolder: string, menu: (NavPage | 'auto')[]): NavPage[];
+    menu(currentUrl: URL, subfolder: string, menu: (MenuItem | 'auto')[]): NavPage[];
     /**
      *
      * @param {NavPage} page
@@ -50,10 +43,10 @@ export class Navigation {
      * @param {TranslationProvider} _
      * @param {any} translations
      * @param {string} subfolder
-     * @param {(NavPage | 'categories' | 'tags' | 'toptags')[]} menu
+     * @param {(MenuItem | 'categories' | 'tags' | 'toptags')[]} menu
      * @returns {NavPage[]}
      */
-    footer(currentUrl: URL, _: TranslationProvider, translations: any, subfolder: string, menu: (NavPage | 'categories' | 'tags' | 'toptags')[]): NavPage[];
+    footer(currentUrl: URL, _: TranslationProvider, translations: any, subfolder: string, menu: (MenuItem | 'categories' | 'tags' | 'toptags')[]): NavPage[];
     /**
      *
      * @param {TaxonomyLinks} links
@@ -115,3 +108,4 @@ export type Taxonomy = import("./taxonomy.mjs").Taxonomy;
 export type UrlFormatter = import("./urls.mjs").UrlFormatter;
 export type MarkdownInstance = import("../../types/Astro").MarkdownInstance;
 export type NavPage = import("../../types/NavPage").NavPage;
+export type MenuItem = import("../../types/NavPage").MenuItem;

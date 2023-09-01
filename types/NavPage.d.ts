@@ -9,3 +9,14 @@ export interface NavPage {
     children: NavPage[];
     rel?: string;
 }
+export interface MenuItem {
+    title: string;
+    order: number;
+    isOpen?: boolean;
+    ariaCurrent?: 'page' | false;
+    fullTitle?: string;
+    children?: NavPage[];
+    section?: string;
+    url?: string;
+    rel?: string;
+}
