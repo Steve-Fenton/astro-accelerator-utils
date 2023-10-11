@@ -34,3 +34,5 @@ Examples:
     |------------------------|-----------------------------------|
     | Test *some* markdown   | Test some markdown                |
     | > Test *some* markdown | Test some markdown                |
+    | Test ~some~ markdown   | Test some markdown                |
+    | Test some\ markdown    | Test some markdown                |
