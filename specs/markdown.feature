@@ -30,6 +30,7 @@ Scenario Outline: Markdown to text formatting
     Then the plain text should be "<Output>"
 
 Examples:
-    | Text                 | Output                                       |
-    |----------------------|----------------------------------------------|
-    | Test *some* markdown | Test some markdown                           |
+    | Text                   | Output                            |
+    |------------------------|-----------------------------------|
+    | Test *some* markdown   | Test some markdown                |
+    | > Test *some* markdown | Test some markdown                |
