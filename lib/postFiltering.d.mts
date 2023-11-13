@@ -33,6 +33,12 @@ export function isAuthor(p: MarkdownInstance): boolean;
  */
 export function isSearch(p: MarkdownInstance): boolean;
 /**
+ * Predicate for whether a page has a modified date
+ * @param {MarkdownInstance} p
+ * @returns {boolean}
+ */
+export function hasModDate(p: MarkdownInstance): boolean;
+/**
  * Predicate for whether a page should be listed
  * @param {MarkdownInstance<Record<string, any>>} p
  * @returns {boolean}
