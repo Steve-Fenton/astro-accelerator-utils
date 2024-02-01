@@ -31,7 +31,7 @@ export type Site = {
       youTubeLinks: 'embed'[],
       headers: 'link'[],
       details: 'tabs'[],
-      search: 'dialog'[],
+      search: 'dialog'|'headings'[],
     },
     images: {
       contentSize: string;
