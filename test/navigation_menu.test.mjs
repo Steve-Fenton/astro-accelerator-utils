@@ -19,8 +19,6 @@ describe('Navigation.menu', () => {
 
         const result = navigation.menu(url, '', ['auto']);
 
-        console.log(JSON.stringify(result));
-
         expect(result[0].fullTitle).toBe('Welcome to Astro *Accelerator*');
         expect(result[0].title).toBe('Home');
         expect(result[0].isOpen).toBe(true);
@@ -63,6 +61,105 @@ describe('Navigation.menu', () => {
         expect(result[6].title).toBe('Main site');
         expect(result[6].isOpen).toBe(false);
         expect(result[6].ariaCurrent).toBe(false);
+    });
+
+    test('Gets custom menu', () => {
+        const posts = new Posts(cache, fetchAll);
+        const navigation = new Navigation(posts, urlFormatter);
+        const url = new URL('https://www.example.com/section/');
+
+        const result = navigation.menu(url, '', [ {
+            title: 'Section',
+            url: '/section/',
+            ariaCurrent: false,
+            isOpen: false,
+            order: 1,
+            section: 'Section',
+            children: [
+              {
+                title: 'Blog',
+                url: '/section/blog/',
+                ariaCurrent: false,
+                isOpen: false,
+                order: 1,
+                section: '',
+                children: []
+               },
+               {
+                title: 'Publications',
+                url: '/section/publications/',
+                ariaCurrent: false,
+                isOpen: false,
+                order: 2,
+                section: '',
+                children: []
+               },
+               {
+                title: 'About',
+                url: '/section/about/',
+                ariaCurrent: false,
+                isOpen: false,
+                order: 3,
+                section: '',
+                children: []
+               },
+            ]
+           }]);
+
+        expect(result[0].title).toBe('Section');
+        expect(result[0].isOpen).toBe(true);
+        expect(result[0].ariaCurrent).toBe('page');
+
+        // Child items
+        expect(result[0].children[0].title).toBe('Blog');
+        expect(result[0].children[0].url).toBe('/section/blog/');
+        expect(result[0].children[0].isOpen).toBe(false);
+        expect(result[0].children[0].ariaCurrent).toBe(false);
+
+        expect(result[0].children[1].title).toBe('Publications');
+        expect(result[0].children[1].url).toBe('/section/publications/');
+        expect(result[0].children[1].isOpen).toBe(false);
+        expect(result[0].children[1].ariaCurrent).toBe(false);
+
+        expect(result[0].children[2].title).toBe('About');
+        expect(result[0].children[2].url).toBe('/section/about/');
+        expect(result[0].children[2].isOpen).toBe(false);
+        expect(result[0].children[2].ariaCurrent).toBe(false);
+    });
+
+    test('Gets custom menu with auto children', () => {
+        const posts = new Posts(cache, fetchAll);
+        const navigation = new Navigation(posts, urlFormatter);
+        const url = new URL('https://www.example.com/');
+
+        const result = navigation.menu(url, '', [{
+            title: 'Home',
+            url: '/',
+            ariaCurrent: false,
+            isOpen: false,
+            order: 1,
+            section: 'Section',
+            children: []
+           },{
+            title: 'All',
+            url: '/all/',
+            ariaCurrent: false,
+            isOpen: false,
+            order: 1,
+            section: 'All',
+            children: [
+            /*   'auto'*/
+            ]
+           }]);
+
+        expect(result[0].title).toBe('Home');
+        expect(result[0].isOpen).toBe(true);
+        expect(result[0].ariaCurrent).toBe('page');
+
+        expect(result[1].title).toBe('All');
+        expect(result[1].isOpen).toBe(false);
+        expect(result[1].ariaCurrent).toBe(false);
+
     });
 
 });

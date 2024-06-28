@@ -1,10 +1,10 @@
 {
   "name": "astro-accelerator-utils",
-  "version": "0.3.7",
+  "version": "0.3.8",
   "description": "Astro utilities for Astro Accelerator.",
   "main": "index.mjs",
   "type": "module",
-  "packageManager": "pnpm@8.7.0",
+  "packageManager": "pnpm@9.1.4",
   "files": [
     "index.mjs",
     "index.d.mts",
@@ -32,7 +32,7 @@
   },
   "homepage": "https://astro.stevefenton.co.uk/",
   "devDependencies": {
-    "@types/node": "^18.19.7",
+    "@types/node": "^18.19.39",
     "jest": "^29.7.0",
     "jest-spec": "^0.0.3",
     "rehype-stringify": "^9.0.4",
