@@ -27,4 +27,9 @@ export interface Frontmatter {
     navMenu?: boolean;
     robots?: string;
     redirect?: string;
+    links: {
+        text: string;
+        url: string;
+        rel: string;
+    }[];
 }

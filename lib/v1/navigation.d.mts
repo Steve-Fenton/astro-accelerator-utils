@@ -25,6 +25,7 @@ export class Navigation {
      * @returns {NavPage[]}
      */
     menu(currentUrl: URL, subfolder: string, menu: (MenuItem | 'auto')[]): NavPage[];
+    addMenuItem(pages: any, item: any, subfolder: any): void;
     /**
      *
      * @param {NavPage} page
@@ -47,6 +48,7 @@ export class Navigation {
      * @returns {NavPage[]}
      */
     footer(currentUrl: URL, _: TranslationProvider, translations: any, subfolder: string, menu: (MenuItem | 'categories' | 'tags' | 'toptags')[]): NavPage[];
+    addFooterItem(pages: any, item: any, links: any, _: any, translations: any, subfolder: any, entries: any): void;
     /**
      *
      * @param {TaxonomyLinks} links
