@@ -1,33 +1,65 @@
-name: Test
+# @format
+
+name: Test and Publish
 
 on:
-  # Trigger the workflow every time you push to the `main` branch
-  # Using a different branch name? Replace `main` with your branch’s name
-  push:
-    branches: [ main ]
-  # Allows you to run this workflow manually from the Actions tab on GitHub.
-  workflow_dispatch:
+    # Trigger the workflow every time you push to the `main` branch
+    # Using a different branch name? Replace `main` with your branch’s name
+    push:
+        branches: [main]
+    # Allows you to run this workflow manually from the Actions tab on GitHub.
+    workflow_dispatch:
+
+# Allow this job to clone the repo and create a page deployment
+permissions:
+    contents: write
+    pages: write
+    id-token: write
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v3
+    build:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v4
 
-      - name: Setup Node
-        uses: actions/setup-node@v3
-        with:
-          node-version: 18
+            - name: Setup Node
+              uses: actions/setup-node@v4
+              with:
+                  node-version: 20
 
-      - name: Check Licenses
-        run: npx license-checker --out ./public/downloads/licenses.csv --csv --onlyAllow "0BSD;BSD-2-Clause;BSD-3-Clause;CC-BY-4.0;ISC;MIT;Apache-2.0;UNLICENSED"
+            - name: Check Licenses
+              run: npx license-checker --out ./public/downloads/licenses.csv --csv --onlyAllow "0BSD;BSD-2-Clause;BSD-3-Clause;CC-BY-4.0;ISC;MIT;Apache-2.0;UNLICENSED"
 
-      - name: NPM Install
-        run: npm install
+            - name: Install pnpm
+              uses: pnpm/action-setup@v4
+              with:
+                  version: 8.7.0
+                  run_install: false
 
-      - name: Type Generation
-        run: npm run types
+            - name: Get pnpm store directory
+              shell: bash
+              run: |
+                  echo "STORE_PATH=$(pnpm store path --silent)" >> $GITHUB_ENV
 
-      - name: Run Tests
-        run: npm run test
+            - name: Setup pnpm cache
+              uses: actions/cache@v4
+              with:
+                  path: ${{ env.STORE_PATH }}
+                  key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+                  restore-keys: |
+                      ${{ runner.os }}-pnpm-store-
+
+            - name: Install dependencies
+              run: pnpm install
+	
+            - name: Type Generation
+              run: pnpm types
+
+            - name: Type Generation
+              run: pnpm test
+
+            - name: Publish if version has been updated
+              uses: JS-DevTools/npm-publish@v3
+              with:
+                  token: ${{ secrets.NPM_AUTH_TOKEN }}
