@@ -52,7 +52,7 @@ jobs:
 
             - name: Install dependencies
               run: pnpm install
-	
+
             - name: Type Generation
               run: pnpm types
 
