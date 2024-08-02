@@ -1,6 +1,6 @@
 {
   "name": "astro-accelerator-utils",
-  "version": "0.3.12",
+  "version": "0.3.13",
   "description": "Astro utilities for Astro Accelerator.",
   "main": "index.mjs",
   "type": "module",
