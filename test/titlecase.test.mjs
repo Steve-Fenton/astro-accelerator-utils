@@ -10,4 +10,8 @@ describe('Markdown.titleCase', () => {
     test('Preserves existing oddities', () => {
         expect(markdown.titleCase('The new Apple iPhone is launched')).toBe('The New Apple iPhone Is Launched');
     });
+
+    test('Handles other characters', () => {
+        expect(markdown.titleCase('The problem: Using a colon with this utility')).toBe('The Problem: Using A Colon With This Utility');
+    });
 });
