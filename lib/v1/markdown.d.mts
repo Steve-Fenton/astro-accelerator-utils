@@ -17,6 +17,7 @@ export class Markdown {
      * @returns {Promise<string>}
      */
     getTextFrom(markdown: string): Promise<string>;
+    isLetter(char: any): any;
     hasUpperCase(input: any): boolean;
     titleCase(input: any): string;
 }
