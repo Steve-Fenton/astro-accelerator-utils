@@ -37,6 +37,12 @@ export function isSearch(p: MarkdownInstance): boolean;
  * @param {MarkdownInstance} p
  * @returns {boolean}
  */
+export function hasDate(p: MarkdownInstance): boolean;
+/**
+ * Predicate for whether a page has a modified date
+ * @param {MarkdownInstance} p
+ * @returns {boolean}
+ */
 export function hasModDate(p: MarkdownInstance): boolean;
 /**
  * Predicate for whether a page should be listed
