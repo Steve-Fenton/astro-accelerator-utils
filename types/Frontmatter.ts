@@ -15,7 +15,6 @@ export interface Frontmatter {
 	navTitle?: string;
 	navSection?: string;
 	navOrder?: number;
-	bannerImage?: { src: string; alt: string };
 	dir?: 'ltr' | 'rtl';
 	lang?: string;
 	paged?: boolean;
@@ -24,5 +23,7 @@ export interface Frontmatter {
 	navMenu?: boolean;
 	robots?: string;
 	redirect?: string;
+	bannerImage?: { src: string; alt: string };
 	links?: { text: string, url: string, rel: string }[];
+	meta?: { name: string; content: string; }[];
 }
