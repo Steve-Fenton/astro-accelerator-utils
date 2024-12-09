@@ -27,6 +27,12 @@ export function showInMenu(p: MarkdownInstance): boolean;
  */
 export function isAuthor(p: MarkdownInstance): boolean;
 /**
+ * Predicate for whether a page is an author page
+ * @param {MarkdownInstance} p
+ * @returns {boolean}
+ */
+export function notAuthor(p: MarkdownInstance): boolean;
+/**
  * Predicate for whether a page is a search page
  * @param {MarkdownInstance} p
  * @returns {boolean}
@@ -49,6 +55,6 @@ export function hasModDate(p: MarkdownInstance): boolean;
  * @param {MarkdownInstance<Record<string, any>>} p
  * @returns {boolean}
  */
-export function isListable(p: any): boolean;
+export function isListable(p: MarkdownInstance<Record<string, any>>): boolean;
 export type PagePredicate = import("../types/PagePredicate").PagePredicate;
 export type MarkdownInstance = import("../types/Astro").MarkdownInstance;

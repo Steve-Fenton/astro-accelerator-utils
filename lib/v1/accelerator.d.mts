@@ -24,13 +24,13 @@ export class Accelerator {
     get statistics(): typeof StatisticsStub;
 }
 export type Site = import("../../types/Site").Site;
-import { Authors } from "./authors.mjs";
-import { Cache } from "./cache.mjs";
-import { DateFormatter } from "./dates.mjs";
-import { Markdown } from "./markdown.mjs";
-import { Navigation } from "./navigation.mjs";
-import { Paging } from "./paging.mjs";
-import { Posts } from "./posts.mjs";
-import { Taxonomy } from "./taxonomy.mjs";
-import { UrlFormatter } from "./urls.mjs";
-import { StatisticsStub } from "./statistics-stub.mjs";
+import { Authors } from './authors.mjs';
+import { Cache } from './cache.mjs';
+import { DateFormatter } from './dates.mjs';
+import { Markdown } from './markdown.mjs';
+import { Navigation } from './navigation.mjs';
+import { Paging } from './paging.mjs';
+import { Posts } from './posts.mjs';
+import { Taxonomy } from './taxonomy.mjs';
+import { UrlFormatter } from './urls.mjs';
+import { StatisticsStub } from './statistics-stub.mjs';

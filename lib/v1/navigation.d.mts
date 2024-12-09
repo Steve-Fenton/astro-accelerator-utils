@@ -24,7 +24,7 @@ export class Navigation {
      * @param {(MenuItem | 'auto')[]} menu
      * @returns {NavPage[]}
      */
-    menu(currentUrl: URL, subfolder: string, menu: (MenuItem | 'auto')[]): NavPage[];
+    menu(currentUrl: URL, subfolder: string, menu: (MenuItem | "auto")[]): NavPage[];
     addMenuItem(pages: any, item: any, subfolder: any): void;
     /**
      *
@@ -47,7 +47,7 @@ export class Navigation {
      * @param {(MenuItem | 'categories' | 'tags' | 'toptags')[]} menu
      * @returns {NavPage[]}
      */
-    footer(currentUrl: URL, _: TranslationProvider, translations: any, subfolder: string, menu: (MenuItem | 'categories' | 'tags' | 'toptags')[]): NavPage[];
+    footer(currentUrl: URL, _: TranslationProvider, translations: any, subfolder: string, menu: (MenuItem | "categories" | "tags" | "toptags")[]): NavPage[];
     addFooterItem(pages: any, item: any, links: any, _: any, translations: any, subfolder: any, entries: any): void;
     /**
      *
@@ -96,7 +96,7 @@ export class Navigation {
      * @param {NavPage | 'auto' | 'tags' | 'toptags' | 'categories'} item
      * @returns {item is NavPage}
      */
-    isNavPage(item: NavPage | 'auto' | 'tags' | 'toptags' | 'categories'): item is import("../../types/NavPage").NavPage;
+    isNavPage(item: NavPage | "auto" | "tags" | "toptags" | "categories"): item is NavPage;
     /**
      * Pops matching page from array
      * @param {MarkdownInstance[]} allPages
