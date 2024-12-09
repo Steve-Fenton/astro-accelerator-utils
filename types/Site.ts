@@ -26,12 +26,12 @@ export type Site = {
     cacheMaxAge: number;
     featureFlags: {
       stickyNav: { top: number },
-      codeBlocks: 'copy'[],
-      figures: 'enlarge'[],
-      youTubeLinks: 'embed'[],
-      headers: 'link'[],
-      details: 'tabs'[],
-      search: 'dialog'|'headings'[],
+      codeBlocks: ('copy')[],
+      figures: ('enlarge')[],
+      youTubeLinks: ('embed')[],
+      headers: ('link')[],
+      details: ('tabs')[],
+      search: ('dialog'|'headings')[],
     },
     images: {
       contentSize: string;
