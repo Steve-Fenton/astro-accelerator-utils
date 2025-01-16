@@ -7,6 +7,7 @@ export type Site = {
     feedUrl: string;
     title: string;
     description: string;
+    startYear: string;
     defaultLanguage: string;
     themeColor: string;
     owner: string;
