@@ -13,7 +13,7 @@
   ],
   "types": "index.d.mts",
   "scripts": {
-    "refresh": "pnpm update && pnpm types && pnpm test",
+    "refresh": "pnpm update && pnpm types && pnpm test && npm version patch",
     "types": "node ./clean.mjs && npx tsc index.mjs --allowJs --declaration --emitDeclarationOnly",
     "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js --collectCoverage  --runInBand"
   },
