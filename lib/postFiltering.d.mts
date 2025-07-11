@@ -39,6 +39,12 @@ export function notAuthor(p: MarkdownInstance): boolean;
  */
 export function isSearch(p: MarkdownInstance): boolean;
 /**
+ * Predicate for whether a page is an search page
+ * @param {MarkdownInstance} p
+ * @returns {boolean}
+ */
+export function notSearch(p: MarkdownInstance): boolean;
+/**
  * Predicate for whether a page has a modified date
  * @param {MarkdownInstance} p
  * @returns {boolean}
