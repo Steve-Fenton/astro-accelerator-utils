@@ -44,16 +44,6 @@ export function steps(map) {
         return context;
     });
 
-    map(/Given I have posts with modDate and posts with only pubDate$/i, (context) => {
-        context.postList = [
-            createPost('2023-01-01', '2023-06-15', 'Has ModDate'),
-            createPost('2023-03-10', null, 'Only PubDate 1'),
-            createPost('2023-02-05', undefined, 'Only PubDate 2'),
-            createPost('2023-01-01', '2023-04-20', 'Has ModDate 2')
-        ];
-        return context;
-    });
-
     map(/Given I have posts without modDate or pubDate$/i, (context) => {
         context.postList = [
             createPost(null, null, 'No Dates 1'),
