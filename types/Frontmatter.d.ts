@@ -5,6 +5,7 @@ export interface Frontmatter {
     subtitle?: string;
     pubDate: Date;
     modDate?: Date;
+    readingTime?: number;
     tags?: string[];
     id?: string;
     authors?: string[];
