@@ -18,3 +18,11 @@ Run the command:
 Run the command:
 
     pnpm test
+
+## Create new version
+
+Run the command:
+
+    pnpm refresh
+
+This updates dependencies, increments the version number, and re-runs types and tests. If successful, committing the change updates the package on NPM.
