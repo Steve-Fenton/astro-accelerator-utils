@@ -16,6 +16,10 @@ permissions:
     pages: write
     id-token: write
 
+env:
+    NODE_VERSION: 24
+    PNPM_VERSION: 10.22.0
+
 jobs:
     build:
         runs-on: ubuntu-latest
@@ -26,7 +30,7 @@ jobs:
             - name: Setup Node
               uses: actions/setup-node@v4
               with:
-                  node-version: 20
+                  node-version: ${{ env.NODE_VERSION }}
 
             - name: Check Licenses
               run: npx license-checker --out ./public/downloads/licenses.csv --csv --onlyAllow "0BSD;BSD-2-Clause;BSD-3-Clause;CC-BY-4.0;ISC;MIT;Apache-2.0;UNLICENSED"
@@ -34,7 +38,7 @@ jobs:
             - name: Install pnpm
               uses: pnpm/action-setup@v4
               with:
-                  version: 9.1.4
+                  version: ${{ env.PNPM_VERSION }}
                   run_install: false
 
             - name: Get pnpm store directory

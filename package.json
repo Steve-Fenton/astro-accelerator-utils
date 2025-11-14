@@ -4,7 +4,7 @@
   "description": "Astro utilities for Astro Accelerator.",
   "main": "index.mjs",
   "type": "module",
-  "packageManager": "pnpm@9.1.4",
+  "packageManager": "pnpm@10.22.0",
   "files": [
     "index.mjs",
     "index.d.mts",
@@ -14,6 +14,7 @@
   "types": "index.d.mts",
   "scripts": {
     "refresh": "npm version patch && pnpm update --latest && pnpm types && pnpm test",
+    "update-node": "bash -c 'source $NVM_DIR/nvm.sh && nvm install --lts && npm install -g pnpm'",
     "types": "node ./clean.mjs && npx tsc index.mjs --allowJs --declaration --emitDeclarationOnly",
     "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js --collectCoverage  --runInBand"
   },
