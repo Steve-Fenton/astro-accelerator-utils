@@ -15,6 +15,7 @@ export interface Frontmatter {
 	categories?: string[];
 	navTitle?: string;
 	navSection?: string;
+	crumbTitle?: string;
 	navOrder?: number;
 	dir?: 'ltr' | 'rtl';
 	lang?: string;
