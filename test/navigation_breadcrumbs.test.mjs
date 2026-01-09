@@ -22,7 +22,7 @@ describe('Navigation.breadcrumbs', () => {
         expect(result.length).toBe(2);
         
         expect(result[0].section).toBe('Home');
-        expect(result[0].title).toBe('Home');
+        expect(result[0].title).toBe('Accelerator');
         expect(result[0].ariaCurrent).toBe(false);
 
         expect(result[1].section).toBe('About');
@@ -40,7 +40,7 @@ describe('Navigation.breadcrumbs', () => {
         expect(result.length).toBe(3);
         
         expect(result[0].section).toBe('Home');
-        expect(result[0].title).toBe('Home');
+        expect(result[0].title).toBe('Accelerator');
         expect(result[0].ariaCurrent).toBe(false);
 
         expect(result[1].section).toBe('About');

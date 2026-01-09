@@ -670,6 +670,7 @@ export function fetchAll() {
                 "title": "Welcome to Astro *Accelerator*",
                 "subtitle": "A *super-lightweight*, accessible, SEO-friendly starter project for Astro",
                 "navTitle": "Home",
+                "crumbTitle": "Accelerator",
                 "navOrder": 0,
                 "pubDate": "2022-09-17T00:00:00.000Z",
                 "keywords": "astro,accelerator,site generator",
