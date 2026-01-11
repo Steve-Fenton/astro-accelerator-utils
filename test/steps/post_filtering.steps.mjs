@@ -181,9 +181,9 @@ export function steps(map) {
         futureDate.setDate(futureDate.getDate() + 7); // 7 days in the future
         
         context.postList = [{
-            url: '/test',
+            url: '/future-test',
             frontmatter: {
-                title: 'Test Page',
+                title: 'Future Test Page',
                 layout: 'src/Layouts/Default.astro',
                 pubDate: futureDate.toISOString()
             }
@@ -268,6 +268,11 @@ export function steps(map) {
 
     map(/When I apply an isListable filter$/i, (context) => {
         context.result = context.postList.filter(PostFiltering.isListable);
+        return context;
+    });
+
+    map(/When I apply an forTaxonomy filter$/i, (context) => {
+        context.result = context.postList.filter(PostFiltering.forTaxonomy);
         return context;
     });
 

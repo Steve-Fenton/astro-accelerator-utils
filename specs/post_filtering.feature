@@ -110,3 +110,43 @@ Scenario: hasModDate returns false for pages without modDate
     Given I have a page without modDate
     When I apply a hasModDate filter
     Then no items should be returned
+
+Scenario: forTaxonomy excludes pages with null url
+    Given I have a page with null url
+    When I apply an forTaxonomy filter
+    Then no items should be returned
+
+Scenario: forTaxonomy excludes pages with empty url
+    Given I have a page with empty url
+    When I apply an forTaxonomy filter
+    Then no items should be returned
+
+Scenario: forTaxonomy excludes pages with null frontmatter
+    Given I have a page with null frontmatter
+    When I apply an forTaxonomy filter
+    Then no items should be returned
+
+Scenario: forTaxonomy excludes pages with null layout
+    Given I have a page with null layout
+    When I apply an forTaxonomy filter
+    Then no items should be returned
+
+Scenario: forTaxonomy excludes redirect pages
+    Given I have a redirect page
+    When I apply an forTaxonomy filter
+    Then no items should be returned
+
+Scenario: forTaxonomy excludes pages with listable set to false
+    Given I have a page with listable set to false
+    When I apply an forTaxonomy filter
+    Then no items should be returned
+
+Scenario: forTaxonomy excludes draft pages
+    Given I have a draft page
+    When I apply an forTaxonomy filter
+    Then no items should be returned
+
+Scenario: forTaxonomy excludes future-dated pages
+    Given I have a future-dated page
+    When I apply an forTaxonomy filter
+    Then the only item returned should be "Future Test Page"
