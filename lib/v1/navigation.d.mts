@@ -92,6 +92,12 @@ export class Navigation {
      */
     mapNavPage(page: MarkdownInstance): NavPage;
     /**
+     * Converts a MarkdownInstance into a NavPage
+     * @param {MarkdownInstance} page
+     * @returns {NavPage}
+     */
+    mapCrumbNavPage(page: MarkdownInstance): NavPage;
+    /**
      * Checks whether the item is a NavPage
      * @param {NavPage | 'auto' | 'tags' | 'toptags' | 'categories'} item
      * @returns {item is NavPage}

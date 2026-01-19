@@ -62,5 +62,12 @@ export function hasModDate(p: MarkdownInstance): boolean;
  * @returns {boolean}
  */
 export function isListable(p: MarkdownInstance<Record<string, any>>): boolean;
+/**
+ * Predicate for whether a page should be used to create tag and category lists.
+ * Specifically, this allows future-dated posts to cause taxonomy pages to be created,
+ * @param {MarkdownInstance<Record<string, any>>} p
+ * @returns {boolean}
+ */
+export function forTaxonomy(p: MarkdownInstance<Record<string, any>>): boolean;
 export type PagePredicate = import("../types/PagePredicate").PagePredicate;
 export type MarkdownInstance = import("../types/Astro").MarkdownInstance;
