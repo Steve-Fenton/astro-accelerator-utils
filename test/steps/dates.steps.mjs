@@ -41,6 +41,16 @@ export function steps(map) {
         return context;
     });
 
+    map(/When I format the date "(.*)" without day with the culture "(.*)"$/i, (context, date, culture) => {
+        context.result = context.dateFormatter.formatDateWithoutDay(date, culture);
+        return context;
+    });
+
+    map(/When I format the short date "(.*)" without day with the culture "(.*)"$/i, (context, date, culture) => {
+        context.result = context.dateFormatter.formatShortDateWithoutDay(date, culture);
+        return context;
+    });
+
     map(/Then the result should be "(.*)"$/i, (context, dateString) => {
         expect(context.result).toBe(dateString);
         return context;
