@@ -24,5 +24,19 @@ export class DateFormatter {
      * @returns {string}
      */
     formatShortDate(date: string | Date, lang: string): string;
+    /**
+     * Returns the formatted date without the day
+     * @param {string | Date} date
+     * @param {string} lang
+     * @returns {string}
+     */
+    formatDateWithoutDay(date: string | Date, lang: string): string;
+    /**
+     * Returns the formatted short date without the day
+     * @param {string | Date} date
+     * @param {string} lang
+     * @returns {string}
+     */
+    formatShortDateWithoutDay(date: string | Date, lang: string): string;
 }
 export type Site = any;
