@@ -60,10 +60,21 @@ jobs:
             - name: Type Generation
               run: pnpm types
 
-            - name: Type Generation
+            - name: Run Tests
               run: pnpm test
 
             - name: Publish if version has been updated
-              uses: JS-DevTools/npm-publish@v3
-              with:
-                  token: ${{ secrets.NPM_AUTH_TOKEN }}
+              env:
+                  NPM_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
+              run: |
+                  PACKAGE_NAME=$(node -p "require('./package.json').name")
+                  LOCAL_VERSION=$(node -p "require('./package.json').version")
+                  REMOTE_VERSION=$(npm view $PACKAGE_NAME version || echo "0.0.0")
+
+                  if [ "$LOCAL_VERSION" != "$REMOTE_VERSION" ] && [ "$(printf '%s\n%s' "$REMOTE_VERSION" "$LOCAL_VERSION" | sort -V | tail -n1)" = "$LOCAL_VERSION" ]; then
+                    echo "Local version $LOCAL_VERSION is higher than remote version $REMOTE_VERSION. Publishing..."
+                    echo "//registry.npmjs.org/:_authToken=$NPM_AUTH_TOKEN" > ~/.npmrc
+                    npm publish --access public
+                  else
+                    echo "Version $LOCAL_VERSION is not newer than $REMOTE_VERSION. Skipping publish."
+                  fi
