@@ -17,7 +17,7 @@
     "update-node": "bash -c 'source $NVM_DIR/nvm.sh && nvm install --lts && npm install -g pnpm'",
     "types": "node ./clean.mjs && npx tsc index.mjs --allowJs --declaration --emitDeclarationOnly",
     "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js --collectCoverage  --runInBand",
-    "new-tests": "c8 --include='lib/**/*.mjs' --exclude='features/**' cucumber-js"
+    "new-tests": "c8 --include='lib/**/*.mjs' --exclude='features/**' --reporter=text --all cucumber-js"
   },
   "repository": {
     "type": "git",
