@@ -8,7 +8,7 @@ export class Accelerator {
     constructor(site: Site);
     cacheMaxAge: number;
     dateOptions: Intl.DateTimeFormatOptions;
-    shortDateOptions: any;
+    shortDateOptions: Intl.DateTimeFormatOptions;
     siteUrl: string;
     subfolder: string;
     useTrailingUrlSlash: boolean;
