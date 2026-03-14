@@ -60,6 +60,9 @@ jobs:
             - name: Type Generation
               run: pnpm types
 
+            - name: Spell Check
+              run: pnpm spell
+
             - name: Run Tests
               run: pnpm test
 

@@ -1,0 +1,28 @@
+{
+  "version": "0.2",
+  "language": "en",
+  "ignorePaths": [
+    "node_modules/**",
+    "coverage/**",
+    ".git/**",
+    ".vscode/**",
+    ".github/**",
+    "dist/**",
+    "pnpm-lock.yaml",
+    "package-lock.json"
+  ],
+  "words": [
+    "astro",
+    "lister",
+    "fenton",
+    "frontmatter",
+    "subfolder",
+    "unlistable",
+    "pnpm",
+    "insigne",
+    "categoria",
+    "jeudi",
+    "juin",
+    "toptags"
+  ]
+}
