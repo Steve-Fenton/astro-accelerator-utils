@@ -31,7 +31,7 @@ Examples:
     | Address                                            | Output                                             |
     | /test/address                                      | /test/address                                      |
     | /test/address/                                     | /test/address                                      |
-    | https://www.external-site.com/test/address/        | https://www.external-site.com/test/address/        |
+    | https://www.example.com/test/address/              | https://www.example.com/test/address/              |
 
 Scenario: formatAddress handles an empty address with no trailing slashes
     Given I am using a URL formatter with trailing slashes disabled
