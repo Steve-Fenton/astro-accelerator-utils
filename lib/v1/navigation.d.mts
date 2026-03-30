@@ -109,7 +109,7 @@ export class Navigation {
      * @param {string} search
      * @returns
      */
-    popMatchingPage(allPages: MarkdownInstance[], search: string): import("../../types/Astro").MarkdownInstance;
+    popMatchingPage(allPages: MarkdownInstance[], search: string): import("../../types/Astro").MarkdownInstance | null;
 }
 export type Posts = import("./posts.mjs").Posts;
 export type Taxonomy = import("./taxonomy.mjs").Taxonomy;
