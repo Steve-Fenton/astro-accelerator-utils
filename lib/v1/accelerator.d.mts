@@ -11,7 +11,7 @@ export class Accelerator {
     shortDateOptions: Intl.DateTimeFormatOptions;
     siteUrl: string;
     subfolder: string;
-    useTrailingUrlSlash: boolean;
+    useTrailingUrlSlash: boolean | undefined;
     captureStatistics: boolean;
     get authors(): Authors;
     get cache(): Cache;
