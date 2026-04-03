@@ -26,5 +26,53 @@ Then('the inline HTML should be {string}', async function (expected) {
 
 Then('the plain text should be {string}', async function (expected) {
     const result = await this.markdown.getTextFrom(this.input);
-    assert.strictEqual(stripLineBreaks(result), expected);
+    assert.strictEqual(stripLineBreaks(result), stripLineBreaks(expected));
+});
+
+When('I get plain text from null', async function () {
+    this.textResult = await this.markdown.getTextFrom(null);
+});
+
+Then('the text result should be empty', function () {
+    assert.strictEqual(this.textResult, '');
+});
+
+When('I convert {string} to title case', function (input) {
+    this.titleResult = this.markdown.titleCase(input);
+});
+
+Then('the title case result should be {string}', function (expected) {
+    assert.strictEqual(this.titleResult, expected);
+});
+
+When('I convert null to title case', function () {
+    this.titleResult = this.markdown.titleCase(null);
+});
+
+Then('the title case result should be empty', function () {
+    assert.strictEqual(this.titleResult, '');
+});
+
+When('I check if {string} has uppercase', function (input) {
+    this.upperResult = this.markdown.hasUpperCase(input);
+});
+
+Then('the uppercase check should be true', function () {
+    assert.strictEqual(this.upperResult, true);
+});
+
+Then('the uppercase check should be false', function () {
+    assert.strictEqual(this.upperResult, false);
+});
+
+When('I check if {string} is a letter', function (char) {
+    this.letterResult = this.markdown.isLetter(char);
+});
+
+Then('the letter check should be true', function () {
+    assert.ok(this.letterResult);
+});
+
+Then('the letter check should be false', function () {
+    assert.ok(!this.letterResult);
 });
