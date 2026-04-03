@@ -150,7 +150,7 @@ Then('the url should be the redirect target', function () {
     assert.strictEqual(this.result.url, '/new-page');
 });
 
-Given('I have a page with crumbTitle', function () {
+Given('I have a page with crumbTitle for crumb', function () {
     this.page = {
         url: '/blog/test',
         frontmatter: {
@@ -161,12 +161,83 @@ Given('I have a page with crumbTitle', function () {
     this.navigation = new Navigation(new MockPosts(), new MockUrlFormatter(), new MockTaxonomy());
 });
 
-When('I map it to a crumb NavPage', function () {
+When('I map it to crumb NavPage', function () {
     this.result = this.navigation.mapCrumbNavPage(this.page);
 });
 
 Then('the title should be the crumbTitle', function () {
     assert.strictEqual(this.result.title, 'Short Title');
+});
+
+Given('I have a paged page for crumb', function () {
+    this.page = {
+        url: '/blog/page',
+        frontmatter: { title: 'Paged', paged: true }
+    };
+    this.navigation = new Navigation(new MockPosts(), new MockUrlFormatter(), new MockTaxonomy());
+});
+
+Then('the crumb url should end with {string}', function (suffix) {
+    assert.ok(this.result.url.endsWith(suffix));
+});
+
+Given('I have a redirect page for crumb', function () {
+    this.page = {
+        url: '/old-page',
+        frontmatter: {
+            title: 'Redirect',
+            layout: 'src/layouts/Redirect.astro',
+            redirect: '/new-page'
+        }
+    };
+    this.navigation = new Navigation(new MockPosts(), new MockUrlFormatter(), new MockTaxonomy());
+});
+
+Then('the crumb url should be the redirect target', function () {
+    assert.strictEqual(this.result.url, '/new-page');
+});
+
+Given('I have pages for addMenuItem auto', function () {
+    const posts = new MockPosts([
+        { url: '/blog', file: '/blog.md', frontmatter: { title: 'Blog', navMenu: true, navOrder: 1 } }
+    ]);
+    this.navigation = new Navigation(posts, new MockUrlFormatter(), new MockTaxonomy());
+});
+
+Given('I have pages for autoMenu', function () {
+    const posts = new MockPosts([
+        { url: '/blog', file: '/blog.md', frontmatter: { title: 'Blog', navMenu: true, navOrder: 1 } },
+        { url: '/about', file: '/about.md', frontmatter: { title: 'About', navMenu: true, navOrder: 2 } }
+    ]);
+    this.navigation = new Navigation(posts, new MockUrlFormatter(), new MockTaxonomy());
+});
+
+When('I add auto menu item', function () {
+    this.pages = [];
+    this.navigation.addMenuItem(this.pages, 'auto', '');
+});
+
+Then('the auto menu items should be added', function () {
+    assert.ok(this.pages.length > 0);
+});
+
+Given('I have a navigation instance for footer', function () {
+    this.navigation = new Navigation(new MockPosts(), new MockUrlFormatter(), new MockTaxonomy());
+});
+
+When('I add a custom footer item', function () {
+    this.pages = [];
+    this.navigation.addFooterItem(this.pages, { url: '/custom', title: 'Custom' }, 
+        { getCategoryLink: () => '', getTagLink: () => '' }, 
+        (x) => x, 
+        { articles: { tag: 'tag', tag_title: 'Tags', category: 'category', category_title: 'Categories' } }, 
+        '', 
+        { categories: [], tags: [], topTags: [] });
+});
+
+Then('the footer should include the custom item', function () {
+    assert.ok(this.pages.length > 0);
+    assert.strictEqual(this.pages[0].title, 'Custom');
 });
 
 Given('I have pages for setCurrentPage', function () {
@@ -189,6 +260,39 @@ Then('the ariaCurrent should be {string}', function (expected) {
 Then('the isOpen should be true for the matching page', function () {
     const current = this.pages.find(p => p.url === '/page2');
     assert.strictEqual(current.isOpen, true);
+});
+
+Given('I have pages for breadcrumbs', function () {
+    const posts = new MockPosts([
+        { url: '/blog', frontmatter: { title: 'Blog' } },
+        { url: '/blog/post', frontmatter: { title: 'Post' } }
+    ]);
+    this.navigation = new Navigation(posts, new MockUrlFormatter(), new MockTaxonomy());
+});
+
+When('I get breadcrumbs for {string}', function (path) {
+    this.result = this.navigation.breadcrumbs({ pathname: path }, '', 1);
+});
+
+When('I get breadcrumbs for {string} with subfolder {string}', function (path, subfolder) {
+    this.result = this.navigation.breadcrumbs({ pathname: path }, subfolder, 1);
+});
+
+When('I get breadcrumbs for {string} with customCount 0', function (path) {
+    this.result = this.navigation.breadcrumbs({ pathname: path }, '', 0);
+});
+
+Then('the last breadcrumb url should be {string}', function (url) {
+    const lastCrumb = this.result[this.result.length - 1];
+    assert.strictEqual(lastCrumb.url, url);
+});
+
+Then('I should have {int} breadcrumb items', function (count) {
+    assert.strictEqual(this.result.length, count);
+});
+
+Then('I should have {int} breadcrumb item', function (count) {
+    assert.strictEqual(this.result.length, count);
 });
 
 Given('I have nested pages for setCurrentPage', function () {
@@ -218,14 +322,6 @@ Given('I have pages at different paths', function () {
     this.navigation = new Navigation(posts, new MockUrlFormatter(), new MockTaxonomy());
 });
 
-When('I get breadcrumbs for {string}', function (path) {
-    this.result = this.navigation.breadcrumbs({ pathname: path }, '', 1);
-});
-
-Then('I should have {int} breadcrumb items', function (count) {
-    assert.strictEqual(this.result.length, count);
-});
-
 Given('I have a navigation instance for menu', function () {
     this.navigation = new Navigation(new MockPosts(), new MockUrlFormatter(), new MockTaxonomy());
 });
@@ -239,14 +335,6 @@ When('I create a menu with custom items', function () {
 
 Then('the menu should have the custom items', function () {
     assert.strictEqual(this.result.length, 2);
-});
-
-Given('I have pages with navMenu', function () {
-    const posts = new MockPosts([
-        { url: '/blog', file: '/blog.md', frontmatter: { title: 'Blog', navMenu: true, navOrder: 1 } },
-        { url: '/about', file: '/about.md', frontmatter: { title: 'About', navMenu: true, navOrder: 2 } }
-    ]);
-    this.navigation = new Navigation(posts, new MockUrlFormatter(), new MockTaxonomy());
 });
 
 When('I get the auto menu', function () {

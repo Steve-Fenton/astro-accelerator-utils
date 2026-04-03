@@ -58,9 +58,19 @@ Scenario: mapNavPage handles redirect pages
     Then the url should be the redirect target
 
 Scenario: mapCrumbNavPage uses crumbTitle when available
-    Given I have a page with crumbTitle
-    When I map it to a crumb NavPage
+    Given I have a page with crumbTitle for crumb
+    When I map it to crumb NavPage
     Then the title should be the crumbTitle
+
+Scenario: mapCrumbNavPage handles paged pages
+    Given I have a paged page for crumb
+    When I map it to crumb NavPage
+    Then the crumb url should end with "/1/"
+
+Scenario: mapCrumbNavPage handles redirect pages
+    Given I have a redirect page for crumb
+    When I map it to crumb NavPage
+    Then the crumb url should be the redirect target
 
 Scenario: setCurrentPage marks current page
     Given I have pages for setCurrentPage
@@ -74,17 +84,32 @@ Scenario: setCurrentPage sets isOpen for child pages
     Then the parent's isOpen should be true
 
 Scenario: breadcrumbs creates breadcrumb trail
-    Given I have pages at different paths
+    Given I have pages for breadcrumbs
     When I get breadcrumbs for "/blog/post"
     Then I should have 2 breadcrumb items
+
+Scenario: breadcrumbs handles subfolder
+    Given I have pages for breadcrumbs
+    When I get breadcrumbs for "/blog/post" with subfolder "blog"
+    Then I should have 2 breadcrumb items
+
+Scenario: breadcrumbs handles customCount 0
+    Given I have pages for breadcrumbs
+    When I get breadcrumbs for "/blog/post" with customCount 0
+    Then the last breadcrumb url should be "/blog/post"
 
 Scenario: menu adds custom menu items
     Given I have a navigation instance for menu
     When I create a menu with custom items
     Then the menu should have the custom items
 
+Scenario: addMenuItem handles 'auto' string
+    Given I have pages for addMenuItem auto
+    When I add auto menu item
+    Then the auto menu items should be added
+
 Scenario: autoMenu generates menu from pages
-    Given I have pages with navMenu
+    Given I have pages for autoMenu
     When I get the auto menu
     Then the auto menu should include those pages
 
@@ -112,3 +137,8 @@ Scenario: footer builds footer with top tags
     Given I have taxonomy with top tags
     When I build the footer menu with toptags
     Then the footer should have top tag items
+
+Scenario: addFooterItem handles custom NavPage items
+    Given I have a navigation instance for footer
+    When I add a custom footer item
+    Then the footer should include the custom item
