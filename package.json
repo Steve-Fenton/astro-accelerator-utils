@@ -17,6 +17,7 @@
     "spell": "cspell lint \"**\"",
     "types": "node ./clean.mjs && npx tsc index.mjs --allowJs --declaration --emitDeclarationOnly",
     "test": "c8 --include='lib/**/*.mjs' --exclude='features/**' --reporter=text --all cucumber-js",
+    "test:report": "c8 --include='lib/**/*.mjs' --exclude='features/**' --reporter=text --all cucumber-js 2>&1 | tee TEST.md",
     "update-node": "bash -c 'source $NVM_DIR/nvm.sh && nvm install --lts && npm install -g pnpm'"
   },
   "repository": {

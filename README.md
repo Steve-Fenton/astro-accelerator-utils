@@ -11,6 +11,8 @@ Utility classes for Astro Accelerator
 
 This package is tested with CucumberJS. The tests are written in the features folder and are run using the `pnpm test` command.
 
+See [TEST.md](TEST.md) for detailed test results and coverage information.
+
 ## Update Type Information
 
 Run the command:
@@ -25,6 +27,12 @@ Run the command:
 
 ```bash
 pnpm test
+```
+
+To generate a coverage report in TEST.md, run:
+
+```bash
+pnpm test:report
 ```
 
 ## Create new version
