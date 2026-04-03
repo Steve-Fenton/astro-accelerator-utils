@@ -9,7 +9,8 @@
     ".github/**",
     "dist/**",
     "pnpm-lock.yaml",
-    "package-lock.json"
+    "package-lock.json",
+    "TEST.md"
   ],
   "words": [
     "astro",
@@ -23,6 +24,7 @@
     "pnpm",
     "subdeps",
     "subfolder",
+    "subfolders",
     "toptags",
     "unlistable"
   ]
