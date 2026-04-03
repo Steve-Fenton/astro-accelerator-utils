@@ -45,3 +45,13 @@ Examples:
     | Culture | Date       | Output    |
     | en      | 2022-06-30 | Jun 2022  |
     | fr      | 2022-06-30 | juin 2022 |
+
+Scenario: Null date without day
+    Given I am using default date options
+    When I format a null date without day
+    Then the result should be an empty string
+
+Scenario: Null short date without day
+    Given I am using default date options
+    When I format a null short date without day
+    Then the result should be an empty string

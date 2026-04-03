@@ -50,3 +50,11 @@ Then('the result should be {string}', function (expected) {
 Then('the result should be an empty string', function () {
     assert.strictEqual(this.result, '');
 });
+
+When('I format a null date without day', function () {
+    this.result = this.dateFormatter.formatDateWithoutDay(null, 'en');
+});
+
+When('I format a null short date without day', function () {
+    this.result = this.dateFormatter.formatShortDateWithoutDay(null, 'en');
+});
