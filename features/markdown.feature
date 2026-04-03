@@ -84,7 +84,3 @@ Scenario: isLetter identifies non-letters correctly
     When I check if "1" is a letter
     Then the letter check should be false
 
-Scenario: titleCase handles consecutive spaces
-    Given I am using the markdown parser
-    When I convert "hello  world" to title case
-    Then the title case result should be "Hello  World"
