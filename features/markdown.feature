@@ -28,63 +28,43 @@ Scenario Outline: Markdown to text formatting
     Then the plain text should be "<Output>"
 
 Examples:
-    | Text                   | Output                            |
-    | Test *some* markdown   | Test some markdown                |
-    | > Test *some* markdown | Test some markdown                |
-    | Test ~some~ markdown   | Test some markdown                |
-    | Test some\ markdown    | Test some markdown                |
+    | Text                   | Output             |
+    | Test *some* markdown   | Test some markdown |
+    | > Test *some* markdown | Test some markdown |
+    | Test ~some~ markdown   | Test some markdown |
+    | Test some\ markdown    | Test some markdown |
+    | [null]                 |                    |
 
-Scenario: getTextFrom handles null input
+Scenario Outline: titleCase conversion
     Given I am using the markdown parser
-    When I get plain text from null
-    Then the text result should be empty
+    When I convert "<Input>" to title case
+    Then the title case result should be "<Output>"
 
-Scenario: titleCase converts string to title case
-    Given I am using the markdown parser
-    When I convert "hello world" to title case
-    Then the title case result should be "Hello World"
+Examples:
+    | Input        | Output       |
+    | hello world  | Hello World  |
+    | [null]       |              |
+    | API and JSON | API And JSON |
+    | it's a test  | It's A Test  |
+    | hello  world | Hello World  |
 
-Scenario: titleCase handles null input
+Scenario Outline: hasUpperCase check
     Given I am using the markdown parser
-    When I convert null to title case
-    Then the title case result should be empty
+    When I check if "<Input>" has uppercase
+    Then the uppercase check should be <Result>
 
-Scenario: titleCase preserves existing uppercase words
-    Given I am using the markdown parser
-    When I convert "API and JSON" to title case
-    Then the title case result should be "API And JSON"
+Examples:
+    | Input       | Result |
+    | Hello World | true   |
+    | hello world | false  |
+    |             | false  |
 
-Scenario: titleCase handles words with special characters
+Scenario Outline: isLetter check
     Given I am using the markdown parser
-    When I convert "it's a test" to title case
-    Then the title case result should be "It's A Test"
+    When I check if "<Char>" is a letter
+    Then the letter check should be <Result>
 
-Scenario: hasUpperCase detects uppercase letters
-    Given I am using the markdown parser
-    When I check if "Hello World" has uppercase
-    Then the uppercase check should be true
-
-Scenario: hasUpperCase returns false for lowercase only
-    Given I am using the markdown parser
-    When I check if "hello world" has uppercase
-    Then the uppercase check should be false
-
-Scenario: hasUpperCase handles empty string
-    Given I am using the markdown parser
-    When I check if "" has uppercase
-    Then the uppercase check should be false
-
-Scenario: isLetter identifies letters correctly
-    Given I am using the markdown parser
-    When I check if "a" is a letter
-    Then the letter check should be true
-
-Scenario: isLetter identifies non-letters correctly
-    Given I am using the markdown parser
-    When I check if "1" is a letter
-    Then the letter check should be false
-
-Scenario: titleCase handles multiple spaces
-    Given I am using the markdown parser
-    When I convert "hello  world" to title case
-    Then the title case result should be "Hello World"
+Examples:
+    | Char | Result |
+    | a    | true   |
+    | 1    | false  |
