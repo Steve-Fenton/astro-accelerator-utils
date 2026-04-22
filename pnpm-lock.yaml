@@ -9,8 +9,8 @@ importers:
   .:
     devDependencies:
       '@cucumber/cucumber':
-        specifier: ^12.8.0
-        version: 12.8.0
+        specifier: ^12.8.1
+        version: 12.8.1
       '@types/node':
         specifier: ^25.6.0
         version: 25.6.0
@@ -294,8 +294,8 @@ packages:
   '@cucumber/cucumber-expressions@19.0.0':
     resolution: {integrity: sha512-4FKoOQh2Uf6F6/Ln+1OxuK8LkTg6PyAqekhf2Ix8zqV2M54sH+m7XNJNLhOFOAW/t9nxzRbw2CcvXbCLjcvHZg==}
 
-  '@cucumber/cucumber@12.8.0':
-    resolution: {integrity: sha512-sRG2QMAgCic4Uq1q+5LRzApEHiNGX5rhQY/GuOJZ9BIySrGPA9pevB0imJsZvdzt9scaWyIM3c7dIf4Dp1YQRA==}
+  '@cucumber/cucumber@12.8.1':
+    resolution: {integrity: sha512-hCXxiStjbZsRVZlV+CMywkqBtJ6RZTQeXSBZGPHm1YoIOI6YB8pCo0KlnJMmxfKfoeUKagtQMNPnpJBXwhkUjQ==}
     engines: {node: 20 || 22 || >=24}
     hasBin: true
 
@@ -319,8 +319,8 @@ packages:
     peerDependencies:
       '@cucumber/messages': '>=18'
 
-  '@cucumber/junit-xml-formatter@0.13.2':
-    resolution: {integrity: sha512-worYkxjeOWJV+b7WkgJekWgFHlIhbuocnFK3hP+pMYXqZMmkXsxAorYPjeF8KyLnZXajw5fKHS2bM9rQIUI7Zw==}
+  '@cucumber/junit-xml-formatter@0.13.3':
+    resolution: {integrity: sha512-w9ujOxiuKDtU6fLzJz+wp4Sgp5Xu6ba7ls00LHJccVmQU0Ba7zs+AHnv3iIgPjKZAQe1w8x93dr8Gaubh7Vqkg==}
     peerDependencies:
       '@cucumber/messages': '*'
 
@@ -346,8 +346,8 @@ packages:
   '@cucumber/tag-expressions@9.1.0':
     resolution: {integrity: sha512-bvHjcRFZ+J1TqIa9eFNO1wGHqwx4V9ZKV3hYgkuK/VahHx73uiP4rKV3JVrvWSMrwrFvJG6C8aEwnCWSvbyFdQ==}
 
-  '@istanbuljs/schema@0.1.3':
-    resolution: {integrity: sha512-ZXRY4jNvVgSVQ8DL3LTcakaAtXwTVUxE81hslsyD2AtoXW/wVob10HkOJ1X/pAlcI7D+2YoZKg5do8G/w6RYgA==}
+  '@istanbuljs/schema@0.1.6':
+    resolution: {integrity: sha512-+Sg6GCR/wy1oSmQDFq4LQDAhm3ETKnorxN+y5nbLULOR3P0c14f2Wurzj3/xqPXtasLFfHd5iRFQ7AJt4KH2cw==}
     engines: {node: '>=8'}
 
   '@jridgewell/resolve-uri@3.1.2':
@@ -768,8 +768,8 @@ packages:
   lower-case@2.0.2:
     resolution: {integrity: sha512-7fm3l3NAF9WfN6W3JOmf5drwpVqX78JtoGJ3A6W0a6ZnldM41w2fV5D490psKFTpMds8TJse/eHLFFsNHHjHgg==}
 
-  lru-cache@11.3.3:
-    resolution: {integrity: sha512-JvNw9Y81y33E+BEYPr0U7omo+U9AySnsMsEiXgwT6yqd31VQWTLNQqmT4ou5eqPFUrTfIDFta2wKhB1hyohtAQ==}
+  lru-cache@11.3.5:
+    resolution: {integrity: sha512-NxVFwLAnrd9i7KUBxC4DrUhmgjzOs+1Qm50D3oF1/oL+r1NpZ4gA7xvG0/zJ8evR7zIKn4vLf7qTNduWFtCrRw==}
     engines: {node: 20 || >=22}
 
   luxon@3.7.2:
@@ -1435,7 +1435,7 @@ snapshots:
     dependencies:
       regexp-match-indices: 1.0.2
 
-  '@cucumber/cucumber@12.8.0':
+  '@cucumber/cucumber@12.8.1':
     dependencies:
       '@cucumber/ci-environment': 13.0.0
       '@cucumber/cucumber-expressions': 19.0.0
@@ -1443,10 +1443,10 @@ snapshots:
       '@cucumber/gherkin-streams': 6.0.0(@cucumber/gherkin@38.0.0)(@cucumber/message-streams@4.1.1(@cucumber/messages@32.2.0))(@cucumber/messages@32.2.0)
       '@cucumber/gherkin-utils': 11.0.0
       '@cucumber/html-formatter': 23.0.0(@cucumber/messages@32.2.0)
-      '@cucumber/junit-xml-formatter': 0.13.2(@cucumber/messages@32.2.0)
+      '@cucumber/junit-xml-formatter': 0.13.3(@cucumber/messages@32.2.0)
       '@cucumber/message-streams': 4.1.1(@cucumber/messages@32.2.0)
       '@cucumber/messages': 32.2.0
-      '@cucumber/pretty-formatter': 1.0.1(@cucumber/cucumber@12.8.0)(@cucumber/messages@32.2.0)
+      '@cucumber/pretty-formatter': 1.0.1(@cucumber/cucumber@12.8.1)(@cucumber/messages@32.2.0)
       '@cucumber/tag-expressions': 9.1.0
       assertion-error-formatter: 3.0.0
       capital-case: 1.0.4
@@ -1501,7 +1501,7 @@ snapshots:
     dependencies:
       '@cucumber/messages': 32.2.0
 
-  '@cucumber/junit-xml-formatter@0.13.2(@cucumber/messages@32.2.0)':
+  '@cucumber/junit-xml-formatter@0.13.3(@cucumber/messages@32.2.0)':
     dependencies:
       '@cucumber/messages': 32.2.0
       '@cucumber/query': 15.0.1(@cucumber/messages@32.2.0)
@@ -1519,9 +1519,9 @@ snapshots:
       class-transformer: 0.5.1
       reflect-metadata: 0.2.2
 
-  '@cucumber/pretty-formatter@1.0.1(@cucumber/cucumber@12.8.0)(@cucumber/messages@32.2.0)':
+  '@cucumber/pretty-formatter@1.0.1(@cucumber/cucumber@12.8.1)(@cucumber/messages@32.2.0)':
     dependencies:
-      '@cucumber/cucumber': 12.8.0
+      '@cucumber/cucumber': 12.8.1
       '@cucumber/messages': 32.2.0
       ansi-styles: 5.2.0
       cli-table3: 0.6.5
@@ -1536,7 +1536,7 @@ snapshots:
 
   '@cucumber/tag-expressions@9.1.0': {}
 
-  '@istanbuljs/schema@0.1.3': {}
+  '@istanbuljs/schema@0.1.6': {}
 
   '@jridgewell/resolve-uri@3.1.2': {}
 
@@ -1610,7 +1610,7 @@ snapshots:
   c8@11.0.0:
     dependencies:
       '@bcoe/v8-coverage': 1.0.2
-      '@istanbuljs/schema': 0.1.3
+      '@istanbuljs/schema': 0.1.6
       find-up: 5.0.0
       foreground-child: 3.3.1
       istanbul-lib-coverage: 3.2.2
@@ -1883,7 +1883,7 @@ snapshots:
 
   hosted-git-info@9.0.2:
     dependencies:
-      lru-cache: 11.3.3
+      lru-cache: 11.3.5
 
   html-escaper@2.0.2: {}
 
@@ -1951,7 +1951,7 @@ snapshots:
     dependencies:
       tslib: 2.8.1
 
-  lru-cache@11.3.3: {}
+  lru-cache@11.3.5: {}
 
   luxon@3.7.2: {}
 
@@ -2180,7 +2180,7 @@ snapshots:
 
   path-scurry@2.0.2:
     dependencies:
-      lru-cache: 11.3.3
+      lru-cache: 11.3.5
       minipass: 7.1.3
 
   picocolors@1.1.1: {}
@@ -2312,7 +2312,7 @@ snapshots:
 
   test-exclude@8.0.0:
     dependencies:
-      '@istanbuljs/schema': 0.1.3
+      '@istanbuljs/schema': 0.1.6
       glob: 13.0.6
       minimatch: 10.2.5
 
