@@ -1,6 +1,6 @@
 {
   "name": "astro-accelerator-utils",
-  "version": "0.3.86",
+  "version": "0.3.87",
   "description": "Astro utilities for Astro Accelerator.",
   "main": "index.mjs",
   "type": "module",
@@ -36,8 +36,8 @@
   },
   "homepage": "https://astro.stevefenton.co.uk/",
   "devDependencies": {
-    "@cucumber/cucumber": "^12.8.3",
-    "@types/node": "^25.6.2",
+    "@cucumber/cucumber": "^12.9.0",
+    "@types/node": "^25.8.0",
     "c8": "^11.0.0",
     "cspell": "^10.0.0",
     "rehype-stringify": "^10.0.1",
