@@ -16,9 +16,6 @@ const files = [
     '/lib/v1/taxonomy.d.mts',
     '/lib/v1/urls.d.mts',
 
-    '/lib/postFiltering.d.mts',
-    '/lib/postOrdering.d.mts',
-
     '/types/Astro.d.ts',
     '/types/AuthorInfo.d.ts',
     '/types/AuthorList.d.ts',
