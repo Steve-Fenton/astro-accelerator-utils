@@ -98,6 +98,16 @@ Scenario: breadcrumbs handles customCount 0
     When I get breadcrumbs for "/blog/post" with customCount 0
     Then the last breadcrumb url should be "/blog/post"
 
+Scenario: breadcrumbs handles trailing slashes in page urls
+    Given I have pages for breadcrumbs with trailing slashes
+    When I get breadcrumbs for "/blog/post/"
+    Then I should have 2 breadcrumb items
+
+Scenario: popMatchingPage matches paths with trailing slashes
+    Given I have a list of pages with trailing slash urls
+    When I pop the page with url "/page2"
+    Then the matched page should have title "Page 2"
+
 Scenario: menu adds custom menu items
     Given I have a navigation instance for menu
     When I create a menu with custom items

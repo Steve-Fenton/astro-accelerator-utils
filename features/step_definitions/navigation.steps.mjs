@@ -270,6 +270,23 @@ Given('I have pages for breadcrumbs', function () {
     this.navigation = new Navigation(posts, new MockUrlFormatter(), new MockTaxonomy());
 });
 
+Given('I have pages for breadcrumbs with trailing slashes', function () {
+    const posts = new MockPosts([
+        { url: '/blog/', frontmatter: { title: 'Blog' } },
+        { url: '/blog/post/', frontmatter: { title: 'Post' } }
+    ]);
+    this.navigation = new Navigation(posts, new MockUrlFormatter(), new MockTaxonomy());
+});
+
+Given('I have a list of pages with trailing slash urls', function () {
+    this.pages = [
+        { url: '/page1/', frontmatter: { title: 'Page 1' } },
+        { url: '/page2/', frontmatter: { title: 'Page 2' } },
+        { url: '/page3/', frontmatter: { title: 'Page 3' } }
+    ];
+    this.navigation = new Navigation(new MockPosts(), new MockUrlFormatter(), new MockTaxonomy());
+});
+
 When('I get breadcrumbs for {string}', function (path) {
     this.result = this.navigation.breadcrumbs({ pathname: path }, '', 1);
 });
