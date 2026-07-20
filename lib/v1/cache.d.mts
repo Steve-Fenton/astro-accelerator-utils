@@ -1,10 +1,10 @@
-export class Cache {
+export declare class Cache {
+    maxAge: number;
     /**
      * Constructor
      * @param {number} maxAge
      */
     constructor(maxAge: number);
-    maxAge: number;
     /**
      * Gets an item from the cache, falls back to supplied function
      * @param {string} key

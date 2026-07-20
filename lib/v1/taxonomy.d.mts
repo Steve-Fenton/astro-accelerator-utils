@@ -1,3 +1,11 @@
+export type Cache = import("./cache.mjs").Cache;
+export type Posts = import("./posts.mjs").Posts;
+export type UrlFormatter = import("./urls.mjs").UrlFormatter;
+export type Site = import("../../types/Site").Site;
+export type TaxonomyList = import("../../types/Taxonomy").TaxonomyList;
+export type TaxonomyEntry = import("../../types/Taxonomy").TaxonomyEntry;
+export type TaxonomyLinks = import("../../types/Taxonomy").TaxonomyLinks;
+export type MarkdownInstance = import("../../types/Astro").MarkdownInstance;
 /**
  * @typedef { import("./cache.mjs").Cache } Cache
  * @typedef { import("./posts.mjs").Posts } Posts
@@ -8,7 +16,10 @@
  * @typedef { import("../../types/Taxonomy").TaxonomyLinks } TaxonomyLinks
  * @typedef { import("../../types/Astro").MarkdownInstance } MarkdownInstance
  */
-export class Taxonomy {
+export declare class Taxonomy {
+    cache: import("./cache.mjs").Cache;
+    posts: import("./posts.mjs").Posts;
+    urlFormatter: import("./urls.mjs").UrlFormatter;
     /**
      * Constructor
      * @param {Cache} cache
@@ -16,9 +27,6 @@ export class Taxonomy {
      * @param {UrlFormatter} urlFormatter
      */
     constructor(cache: Cache, posts: Posts, urlFormatter: UrlFormatter);
-    cache: import("./cache.mjs").Cache;
-    posts: import("./posts.mjs").Posts;
-    urlFormatter: import("./urls.mjs").UrlFormatter;
     /**
      *
      * @returns {TaxonomyList}
@@ -43,7 +51,7 @@ export class Taxonomy {
      * @param {TaxonomyEntry} b
      * @returns
      */
-    sortByTitle(a: TaxonomyEntry, b: TaxonomyEntry): 0 | 1 | -1;
+    sortByTitle(a: TaxonomyEntry, b: TaxonomyEntry): -1 | 0 | 1;
     /**
      * Sorts taxonomy entries by title
      * @param {TaxonomyEntry} a
@@ -52,11 +60,3 @@ export class Taxonomy {
      */
     sortByVolume(a: TaxonomyEntry, b: TaxonomyEntry): number;
 }
-export type Cache = import("./cache.mjs").Cache;
-export type Posts = import("./posts.mjs").Posts;
-export type UrlFormatter = import("./urls.mjs").UrlFormatter;
-export type Site = import("../../types/Site").Site;
-export type TaxonomyList = import("../../types/Taxonomy").TaxonomyList;
-export type TaxonomyEntry = import("../../types/Taxonomy").TaxonomyEntry;
-export type TaxonomyLinks = import("../../types/Taxonomy").TaxonomyLinks;
-export type MarkdownInstance = import("../../types/Astro").MarkdownInstance;
