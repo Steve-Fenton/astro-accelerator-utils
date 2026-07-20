@@ -1,7 +1,8 @@
 /**
  * @typedef { import("../../types/Link").Link } Link
  */
-export class Paging {
+export type Link = import("../../types/Link").Link;
+export declare class Paging {
     /**
      * Provides a list of paging links, 1 ... 3 4 5 ... 7
      * @param {number} limit
@@ -12,4 +13,3 @@ export class Paging {
      */
     links(limit: number, numberOfPages: number, currentPage: number, url: string): Link[];
 }
-export type Link = import("../../types/Link").Link;

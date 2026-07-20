@@ -1,15 +1,16 @@
 /**
  * @typedef { import("../types/Site") } Site
  */
-export class DateFormatter {
+export type Site = import("../types/Site");
+export declare class DateFormatter {
+    dateOptions: Intl.DateTimeFormatOptions;
+    shortDateOptions: Intl.DateTimeFormatOptions;
     /**
      * Constructor
      * @param {Intl.DateTimeFormatOptions} dateOptions
      * @param {Intl.DateTimeFormatOptions} shortDateOptions
      */
     constructor(dateOptions: Intl.DateTimeFormatOptions, shortDateOptions: Intl.DateTimeFormatOptions);
-    dateOptions: Intl.DateTimeFormatOptions;
-    shortDateOptions: Intl.DateTimeFormatOptions;
     /**
      * Returns the formatted pubDate
      * @param {string | Date} date
@@ -39,4 +40,3 @@ export class DateFormatter {
      */
     formatShortDateWithoutDay(date: string | Date, lang: string): string;
 }
-export type Site = any;

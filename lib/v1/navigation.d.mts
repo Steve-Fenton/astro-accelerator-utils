@@ -1,4 +1,13 @@
-export class Navigation {
+export type Posts = import("./posts.mjs").Posts;
+export type Taxonomy = import("./taxonomy.mjs").Taxonomy;
+export type UrlFormatter = import("./urls.mjs").UrlFormatter;
+export type MarkdownInstance = import("../../types/Astro").MarkdownInstance;
+export type NavPage = import("../../types/NavPage").NavPage;
+export type MenuItem = import("../../types/NavPage").MenuItem;
+export declare class Navigation {
+    posts: import("./posts.mjs").Posts;
+    urlFormatter: import("./urls.mjs").UrlFormatter;
+    taxonomy: import("./taxonomy.mjs").Taxonomy;
     /**
      * Constructor
      * @param {Posts} posts
@@ -6,9 +15,6 @@ export class Navigation {
      * @param {Taxonomy} taxonomy
      */
     constructor(posts: Posts, urlFormatter: UrlFormatter, taxonomy: Taxonomy);
-    posts: import("./posts.mjs").Posts;
-    urlFormatter: import("./urls.mjs").UrlFormatter;
-    taxonomy: import("./taxonomy.mjs").Taxonomy;
     /**
      * Returns a list of breadcrumbs
      * @param {URL} currentUrl
@@ -24,7 +30,7 @@ export class Navigation {
      * @param {(MenuItem | 'auto')[]} menu
      * @returns {NavPage[]}
      */
-    menu(currentUrl: URL, subfolder: string, menu: (MenuItem | "auto")[]): NavPage[];
+    menu(currentUrl: URL, subfolder: string, menu: (MenuItem | 'auto')[]): NavPage[];
     addMenuItem(pages: any, item: any, subfolder: any): void;
     /**
      *
@@ -47,7 +53,7 @@ export class Navigation {
      * @param {(MenuItem | 'categories' | 'tags' | 'toptags')[]} menu
      * @returns {NavPage[]}
      */
-    footer(currentUrl: URL, _: TranslationProvider, translations: any, subfolder: string, menu: (MenuItem | "categories" | "tags" | "toptags")[]): NavPage[];
+    footer(currentUrl: URL, _: TranslationProvider, translations: any, subfolder: string, menu: (MenuItem | 'categories' | 'tags' | 'toptags')[]): NavPage[];
     addFooterItem(pages: any, item: any, links: any, _: any, translations: any, subfolder: any, entries: any): void;
     /**
      *
@@ -102,7 +108,19 @@ export class Navigation {
      * @param {NavPage | 'auto' | 'tags' | 'toptags' | 'categories'} item
      * @returns {item is NavPage}
      */
-    isNavPage(item: NavPage | "auto" | "tags" | "toptags" | "categories"): item is NavPage;
+    isNavPage(item: NavPage | 'auto' | 'tags' | 'toptags' | 'categories'): item is NavPage;
+    /**
+     * Counts non-empty path segments so trailing slashes do not affect depth
+     * @param {string | null | undefined} path
+     * @returns {number}
+     */
+    pathDepth(path: string | null | undefined): number;
+    /**
+     * Normalizes a path for comparison by joining non-empty segments
+     * @param {string | null | undefined} path
+     * @returns {string}
+     */
+    normalizePath(path: string | null | undefined): string;
     /**
      * Pops matching page from array
      * @param {MarkdownInstance[]} allPages
@@ -111,9 +129,3 @@ export class Navigation {
      */
     popMatchingPage(allPages: MarkdownInstance[], search: string): import("../../types/Astro").MarkdownInstance | null;
 }
-export type Posts = import("./posts.mjs").Posts;
-export type Taxonomy = import("./taxonomy.mjs").Taxonomy;
-export type UrlFormatter = import("./urls.mjs").UrlFormatter;
-export type MarkdownInstance = import("../../types/Astro").MarkdownInstance;
-export type NavPage = import("../../types/NavPage").NavPage;
-export type MenuItem = import("../../types/NavPage").MenuItem;

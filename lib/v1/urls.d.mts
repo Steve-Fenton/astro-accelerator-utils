@@ -1,4 +1,7 @@
-export class UrlFormatter {
+export declare class UrlFormatter {
+    siteUrl: string;
+    subfolder: string;
+    useTrailingUrlSlash: boolean;
     /**
      * Constructor
      * @param {string} siteUrl
@@ -6,9 +9,6 @@ export class UrlFormatter {
      * @param {boolean} useTrailingUrlSlash
      */
     constructor(siteUrl: string, subfolder: string, useTrailingUrlSlash: boolean);
-    siteUrl: string;
-    subfolder: string;
-    useTrailingUrlSlash: boolean;
     /** Uses config to decide whether to add or remove trailing slashes
      * @param {URL} url
      * @returns {URL}

@@ -1,11 +1,18 @@
+import { Authors } from './authors.mjs';
+import { Cache } from './cache.mjs';
+import { DateFormatter } from './dates.mjs';
+import { Markdown } from './markdown.mjs';
+import { Navigation } from './navigation.mjs';
+import { Paging } from './paging.mjs';
+import { Posts } from './posts.mjs';
+import { Taxonomy } from './taxonomy.mjs';
+import { UrlFormatter } from './urls.mjs';
+import { StatisticsStub } from './statistics-stub.mjs';
+export type Site = import("../../types/Site").Site;
 /**
  * @typedef { import("../../types/Site").Site } Site
  */
-export class Accelerator {
-    /**
-     * @param {Site} site
-     */
-    constructor(site: Site);
+export declare class Accelerator {
     cacheMaxAge: number;
     dateOptions: Intl.DateTimeFormatOptions;
     shortDateOptions: Intl.DateTimeFormatOptions;
@@ -13,6 +20,10 @@ export class Accelerator {
     subfolder: string;
     useTrailingUrlSlash: boolean | undefined;
     captureStatistics: boolean;
+    /**
+     * @param {Site} site
+     */
+    constructor(site: Site);
     get authors(): Authors;
     get cache(): Cache;
     get dateFormatter(): DateFormatter;
@@ -24,14 +35,3 @@ export class Accelerator {
     get urlFormatter(): UrlFormatter;
     get statistics(): typeof StatisticsStub;
 }
-export type Site = import("../../types/Site").Site;
-import { Authors } from './authors.mjs';
-import { Cache } from './cache.mjs';
-import { DateFormatter } from './dates.mjs';
-import { Markdown } from './markdown.mjs';
-import { Navigation } from './navigation.mjs';
-import { Paging } from './paging.mjs';
-import { Posts } from './posts.mjs';
-import { Taxonomy } from './taxonomy.mjs';
-import { UrlFormatter } from './urls.mjs';
-import { StatisticsStub } from './statistics-stub.mjs';

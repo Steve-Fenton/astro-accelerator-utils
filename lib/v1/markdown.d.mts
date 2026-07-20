@@ -1,4 +1,4 @@
-export class Markdown {
+export declare class Markdown {
     /**
      * Converts markdown to HTML without wrapping in a <p>
      * @param {string} markdown
