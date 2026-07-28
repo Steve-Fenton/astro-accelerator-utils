@@ -49,3 +49,19 @@ Scenario: accelerator provides statistics with captureStatistics true
 Scenario: accelerator provides statistics stub with captureStatistics false
     Given I have an accelerator with statistics disabled
     Then I should have access to StatisticsStub
+
+Scenario: cache max age is 30 seconds in development
+    Given NODE_ENV is "development"
+    When I create an accelerator instance without cache max age
+    Then the cache max age should be 30
+
+Scenario: cache max age defaults to 5 minutes in production
+    Given NODE_ENV is "production"
+    When I create an accelerator instance without cache max age
+    Then the cache max age should be 300
+
+Scenario: cache max age uses configured value in production
+    Given NODE_ENV is "production"
+    And I have a site configuration with cache max age 600
+    When I create an accelerator instance
+    Then the cache max age should be 600

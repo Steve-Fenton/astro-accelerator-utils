@@ -1,5 +1,5 @@
 import assert from 'node:assert';
-import { Given, When, Then } from '@cucumber/cucumber';
+import { After, Given, When, Then } from '@cucumber/cucumber';
 import { Accelerator } from '../../index.mjs';
 import { Posts } from '../../lib/v1/posts.mjs';
 import { Cache } from '../../lib/v1/cache.mjs';
@@ -12,6 +12,16 @@ import { Authors } from '../../lib/v1/authors.mjs';
 import { DateFormatter } from '../../lib/v1/dates.mjs';
 import { Statistics } from '../../lib/v1/statistics.mjs';
 import { StatisticsStub } from '../../lib/v1/statistics-stub.mjs';
+
+After(function () {
+    if (Object.hasOwn(this, 'savedNodeEnv')) {
+        if (this.savedNodeEnv === undefined) {
+            delete process.env.NODE_ENV;
+        } else {
+            process.env.NODE_ENV = this.savedNodeEnv;
+        }
+    }
+});
 
 Given('I have a site configuration', function () {
     this.site = {
@@ -27,6 +37,39 @@ Given('I have a site configuration', function () {
 
 When('I create an accelerator instance', function () {
     this.accelerator = new Accelerator(this.site);
+});
+
+When('I create an accelerator instance without cache max age', function () {
+    this.site = {
+        dateOptions: { weekday: 'long' },
+        shortDateOptions: { month: 'short' },
+        url: 'https://example.com',
+        subfolder: '',
+        useTrailingUrlSlash: true,
+        captureStatistics: false
+    };
+    this.accelerator = new Accelerator(this.site);
+});
+
+Given('NODE_ENV is {string}', function (nodeEnv) {
+    this.savedNodeEnv = process.env.NODE_ENV;
+    process.env.NODE_ENV = nodeEnv;
+});
+
+Given('I have a site configuration with cache max age {int}', function (cacheMaxAge) {
+    this.site = {
+        cacheMaxAge,
+        dateOptions: { weekday: 'long' },
+        shortDateOptions: { month: 'short' },
+        url: 'https://example.com',
+        subfolder: '',
+        useTrailingUrlSlash: true,
+        captureStatistics: false
+    };
+});
+
+Then('the cache max age should be {int}', function (expected) {
+    assert.strictEqual(this.accelerator.cacheMaxAge, expected);
 });
 
 Then('the properties should be initialized', function () {

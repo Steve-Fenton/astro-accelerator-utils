@@ -25,7 +25,7 @@ export type Site = {
   pageSize: number;
   pageLinks: number;
   rssLimit: number;
-  cacheMaxAge: number;
+  cacheMaxAge?: number;
   featureFlags: {
     stickyNav: { top: number },
     codeBlocks: ('copy')[],
