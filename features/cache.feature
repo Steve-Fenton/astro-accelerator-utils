@@ -15,3 +15,11 @@ Scenario: Clear cache
     When I cache an item called "clearable-item"
     And I clear the cache
     Then the item called "clearable-item" should be null
+
+Scenario: In-memory cache is shared across cache instances
+    Given I have a 10 second cache
+    And I cache an item called "shared-item"
+    And I have another 10 second cache
+    When I retrieve an item called "shared-item" from the other cache
+    Then the cached item should be retrieved
+    And the function should be called only once

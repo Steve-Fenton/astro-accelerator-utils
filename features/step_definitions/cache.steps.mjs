@@ -13,12 +13,22 @@ Given('I have a {int} second cache', function (seconds) {
     };
 });
 
+Given('I have another {int} second cache', function (seconds) {
+    const site = { cacheMaxAge: seconds };
+    const accelerator = new Accelerator(site);
+    this.otherCache = accelerator.cache;
+});
+
 When('I cache an item called {string}', function (key) {
     this.cache.get(key, this.func);
 });
 
 When('I retrieve an item called {string}', function (key) {
     this.result = this.cache.get(key, this.func);
+});
+
+When('I retrieve an item called {string} from the other cache', function (key) {
+    this.result = this.otherCache.get(key, this.func);
 });
 
 When('I clear the cache', function () {
