@@ -98,6 +98,12 @@ Scenario: breadcrumbs handles customCount 0
     When I get breadcrumbs for "/blog/post" with customCount 0
     Then the last breadcrumb url should be "/blog/post"
 
+Scenario: breadcrumbs does not deplete cached posts
+    Given I have pages for breadcrumbs with shared posts cache
+    When I get breadcrumbs for "/blog/post"
+    And I get all posts again
+    Then all posts should still be available
+
 Scenario: breadcrumbs handles trailing slashes in page urls
     Given I have pages for breadcrumbs with trailing slashes
     When I get breadcrumbs for "/blog/post/"

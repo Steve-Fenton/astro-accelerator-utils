@@ -1,6 +1,20 @@
 import assert from 'node:assert';
 import { Given, When, Then } from '@cucumber/cucumber';
 import { Navigation } from '../../lib/v1/navigation.mjs';
+import { Posts } from '../../lib/v1/posts.mjs';
+
+class SharedReferenceCache {
+    constructor() {
+        this.store = new Map();
+    }
+
+    get(key, func) {
+        if (!this.store.has(key)) {
+            this.store.set(key, func());
+        }
+        return this.store.get(key);
+    }
+}
 
 class MockPosts {
     constructor(pages = []) {
@@ -270,6 +284,17 @@ Given('I have pages for breadcrumbs', function () {
     this.navigation = new Navigation(posts, new MockUrlFormatter(), new MockTaxonomy());
 });
 
+Given('I have pages for breadcrumbs with shared posts cache', function () {
+    const pages = [
+        { url: '/blog', frontmatter: { title: 'Blog' } },
+        { url: '/blog/post', frontmatter: { title: 'Post' } },
+        { url: '/articles', frontmatter: { title: 'Articles' } }
+    ];
+    const posts = new Posts(new SharedReferenceCache(), () => pages);
+    this.posts = posts;
+    this.navigation = new Navigation(posts, new MockUrlFormatter(), new MockTaxonomy());
+});
+
 Given('I have pages for breadcrumbs with trailing slashes', function () {
     const posts = new MockPosts([
         { url: '/blog/', frontmatter: { title: 'Blog' } },
@@ -291,6 +316,10 @@ When('I get breadcrumbs for {string}', function (path) {
     this.result = this.navigation.breadcrumbs({ pathname: path }, '', 1);
 });
 
+When('I get all posts again', function () {
+    this.allPosts = this.posts.all();
+});
+
 When('I get breadcrumbs for {string} with subfolder {string}', function (path, subfolder) {
     this.result = this.navigation.breadcrumbs({ pathname: path }, subfolder, 1);
 });
@@ -306,6 +335,10 @@ Then('the last breadcrumb url should be {string}', function (url) {
 
 Then('I should have {int} breadcrumb items', function (count) {
     assert.strictEqual(this.result.length, count);
+});
+
+Then('all posts should still be available', function () {
+    assert.strictEqual(this.allPosts.length, 3);
 });
 
 Then('I should have {int} breadcrumb item', function (count) {

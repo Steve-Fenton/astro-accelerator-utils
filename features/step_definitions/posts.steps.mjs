@@ -45,6 +45,16 @@ When('I get all posts multiple times', function () {
     this.result = this.posts.all();
 });
 
+When('I splice a post from the first all posts result', function () {
+    this.firstResult = this.posts.all();
+    this.firstResult.splice(0, 1);
+    this.secondResult = this.posts.all();
+});
+
+Then('the second all posts result should still have 3 posts', function () {
+    assert.strictEqual(this.secondResult.length, 3);
+});
+
 Then('I should have 3 posts', function () {
     assert.strictEqual(this.result.length, 3);
 });

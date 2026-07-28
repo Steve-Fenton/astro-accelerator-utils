@@ -11,6 +11,11 @@ Scenario: all caches results
     When I get all posts multiple times
     Then the data should only be fetched once
 
+Scenario: all returns independent copies
+    Given I have a posts instance with mock data
+    When I splice a post from the first all posts result
+    Then the second all posts result should still have 3 posts
+
 Scenario: root returns top-level posts when no subfolder specified
     Given I have posts at different depths
     When I get root posts without a subfolder
