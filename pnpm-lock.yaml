@@ -9,11 +9,11 @@ importers:
   .:
     devDependencies:
       '@cucumber/cucumber':
-        specifier: ^13.2.1
-        version: 13.2.1
+        specifier: ^13.3.0
+        version: 13.3.0
       '@types/node':
-        specifier: ^26.6.4
-        version: 26.6.4
+        specifier: ^26.6.5
+        version: 26.6.5
       c8:
         specifier: ^12.0.0
         version: 12.0.0
@@ -119,8 +119,8 @@ packages:
   '@cspell/dict-data-science@2.0.16':
     resolution: {integrity: sha512-M72mxv5asuAnORurz4iXRJ+Tw9XBq6eu7D2Ne7biP0Z1RciKGNxXWu9JycA/KlVvK1hAlKj/fANlXhuEWpXKFg==}
 
-  '@cspell/dict-django@4.1.6':
-    resolution: {integrity: sha512-SdbSFDGy9ulETqNz15oWv2+kpWLlk8DJYd573xhIkeRdcXOjskRuxjSZPKfW7O3NxN/KEf3gm3IevVOiNuFS+w==}
+  '@cspell/dict-django@4.1.7':
+    resolution: {integrity: sha512-94LIxiF/StBTxDkmBhi1eoOX9D/B7gk6pabBvIZFh0gmREAU6ESqU2Wv/RfGARdueMQMPfOJka+vbtL4yKv0oA==}
 
   '@cspell/dict-docker@1.1.17':
     resolution: {integrity: sha512-OcnVTIpHIYYKhztNTyK8ShAnXTfnqs43hVH6p0py0wlcwRIXe5uj4f12n7zPf2CeBI7JAlPjEsV0Rlf4hbz/xQ==}
@@ -131,8 +131,8 @@ packages:
   '@cspell/dict-elixir@4.0.8':
     resolution: {integrity: sha512-CyfphrbMyl4Ms55Vzuj+mNmd693HjBFr9hvU+B2YbFEZprE5AG+EXLYTMRWrXbpds4AuZcvN3deM2XVB80BN/Q==}
 
-  '@cspell/dict-en-common-misspellings@2.2.3':
-    resolution: {integrity: sha512-rwskWjznsDSZe3ck03BGUNT3UY9MjO1e4E9LJWACFzdDjkdM7uzro2/WfKvZTBVWVnRlzdRXPrtjkUZFI2A66A==}
+  '@cspell/dict-en-common-misspellings@2.2.4':
+    resolution: {integrity: sha512-Jy53Gk2yyX2BgJ+NKKufdJxjiNf0aou2QhUKwN1ndaKof25WgqOQ6+27jNU0Fbaw1HVi7vCyFq5oIQxBHhwk2w==}
 
   '@cspell/dict-en-gb-mit@3.1.29':
     resolution: {integrity: sha512-mInExsCFZui0f9Vg/MToWfQZzwMfPgHX8BCYdZNdXWbYz+jITXcnvssbdUkui/DVbriZVJ74Zu9bv2jOEqTCNA==}
@@ -214,8 +214,8 @@ packages:
   '@cspell/dict-node@5.0.9':
     resolution: {integrity: sha512-hO+ga+uYZ/WA4OtiMEyKt5rDUlUyu3nXMf8KVEeqq2msYvAPdldKBGH7lGONg6R/rPhv53Rb+0Y1SLdoK1+7wQ==}
 
-  '@cspell/dict-npm@5.2.52':
-    resolution: {integrity: sha512-JttzSladJ4KVhfg9QiBM4os+wAKbet2F58wpbM5VJLnL8fAj3xwvBvSxdY64yrW6Y5wdSPHoTCLqXOKoyBJFnA==}
+  '@cspell/dict-npm@5.2.53':
+    resolution: {integrity: sha512-3QDyduvLApXf2PyjmgwzapUREytih0FNRve7StuYQeHYoUHKHNjT3AX6KFWSVtSAtff0LfCcyFZVz4OyvNuQ1Q==}
 
   '@cspell/dict-php@4.1.3':
     resolution: {integrity: sha512-41oKzl7rLVrrVZA/Gs0ESnP6KliEX7c+IwaaNmOL3PAoHasFDVEmIFeENIzuDdM12UcHT+MlLkAm3Qw/lS/ERA==}
@@ -244,8 +244,8 @@ packages:
   '@cspell/dict-shell@1.2.0':
     resolution: {integrity: sha512-PVctvT22lJ49niMiakO8xieY7ELCAzjSqhejWR7bAMb5AZ9F4WDEs+XdGMnoVHWeXq7K5rcepLPmEJb+37zzIw==}
 
-  '@cspell/dict-software-terms@5.4.6':
-    resolution: {integrity: sha512-r4Xw367hTosVCAQ884nPWhwcy3Jc6YWQFkW1XBdxFGdzdCltzuNf9qdJL1AwiTWMbiRnifIqKaXN0A38WCVEbQ==}
+  '@cspell/dict-software-terms@5.4.7':
+    resolution: {integrity: sha512-zgrCBh4cZt2iQ7igxXNmF04ZngKMSOxwCHGHopCQNDuPDvN2Epy/Hqjmrohnku5G5MzfzHQWEXzDu6dNPyGIlw==}
 
   '@cspell/dict-sql@2.2.1':
     resolution: {integrity: sha512-qDHF8MpAYCf4pWU8NKbnVGzkoxMNrFqBHyG/dgrlic5EQiKANCLELYtGlX5auIMDLmTf1inA0eNtv74tyRJ/vg==}
@@ -288,14 +288,14 @@ packages:
     resolution: {integrity: sha512-IaEu6ePAWmb8QG+MFdhEnnGBAVhI+Qhph97x0v6RrwytwlyuO6MynaIcuYDCb9aLEDBVrDIGDj/+dplL+Sj8LQ==}
     engines: {node: '>=22.18.0'}
 
-  '@cucumber/ci-environment@14.0.0':
-    resolution: {integrity: sha512-CJbjPPGuk1fArPRVKB6FU2q9FHxOQOeq7IEJcB2NLNhOhV97uazLxvwD5ucAJb/flky+czOLhvaYaRAF6l5QYQ==}
+  '@cucumber/ci-environment@15.0.0':
+    resolution: {integrity: sha512-9zIy0YIn7Tkws4pNJElf/kOnPy/6yxWZPWH6eMNW8s/BsV3d10+Xs1yjp2HwEMPElnrFEVHQlUs4XGQ1M3q2Nw==}
 
-  '@cucumber/cucumber-expressions@20.0.0':
-    resolution: {integrity: sha512-t2FBLKuU0U1nP5FM8pHiVonYcXVm07fvXr/H9osdvrjcLXSWc5OCbOOqV/k5S56w/YndPv1Sv2/m/x1KBYvIlA==}
+  '@cucumber/cucumber-expressions@20.1.0':
+    resolution: {integrity: sha512-KXQJChHTyHdg6HI7fHy3zpjfoS205vV1B/aJQKB82VFgMGbdVdiaSy7sTtap/5Q787anLmZt25Tg0FqQ2n4fqw==}
 
-  '@cucumber/cucumber@13.2.1':
-    resolution: {integrity: sha512-Km3mLbZKOE/TlR9ExGWcG7PwOG1ArMt/R6BexrMhGA8pLGaLCWYISTHStpftLuuhVKvVd3RO5M/pfARKyvcyWg==}
+  '@cucumber/cucumber@13.3.0':
+    resolution: {integrity: sha512-6OSoj/SQogJwEjoNrPZ5gtyTDwbmtCDuzJ/hc81nOVhwEBAO6ypgdWd+qCScOdyZxgtQvUWG534LBWb5h9/Y8Q==}
     engines: {node: 22 || 24 || >=26}
     hasBin: true
 
@@ -307,23 +307,20 @@ packages:
       '@cucumber/message-streams': '>=4.0.0'
       '@cucumber/messages': '>=17.1.1'
 
-  '@cucumber/gherkin-utils@12.0.1':
-    resolution: {integrity: sha512-vImHbmTzvGcZP4SFSbx7P6janHZN+BqGWXc3EIQ7UeYMeDzwV9ybSlRfpECV340pxKYZyMTtuSCP3CDXfuWCQw==}
+  '@cucumber/gherkin-utils@12.0.2':
+    resolution: {integrity: sha512-e678WQqU3zJnZ3GW4D7O4/mrD3vku0iUYJPz7cuLNw3jcK81dvbt5iYa5l3tfT9z2rxE5ObFPUbTkDN7zFwqjw==}
     hasBin: true
 
-  '@cucumber/gherkin@41.0.0':
-    resolution: {integrity: sha512-pKGx1EzNjtWbpw74kEevKDMj71dF3ZSaFJpLYuWVvRZKe+Cwoq5iEkuMaELIg1jxIu8jH/A2HPMpMR8UBvdG0w==}
+  '@cucumber/gherkin@42.0.1':
+    resolution: {integrity: sha512-Kqg0ULhWqbXp/a1c04ND4sS4KTlIL831tQ0NhZLXWdEhT6LiNsZ5LFRzy/lBy7QQpcKhroKp/i3C2WdEnRBKNg==}
 
-  '@cucumber/gherkin@42.0.0':
-    resolution: {integrity: sha512-kBcv+NV4FGQYX6NIsSCjsjaX8MsRdEH559BQ9xEFPgkLQX/Z//JZrY94fpjxW6quo4V5kxlzFiiVC5xouF9Akg==}
-
-  '@cucumber/html-formatter@24.1.0':
-    resolution: {integrity: sha512-5TBLnBT+tIvtamw/jtblBVgzQ2/ckd+md8I0rwkEk29vFMCF68jNwhyONGq6leUYMq4kVF+KdFhE8xGrSc3kJw==}
+  '@cucumber/html-formatter@24.2.0':
+    resolution: {integrity: sha512-6Y5ijKyFeNiaMdcYna/fo1Bluzebm8L+vSAyuymIt7Dxu5Fq1sDYMGqR1rYeuNdJmXyu/YRtGLOsrZdCJCQGIg==}
     peerDependencies:
       '@cucumber/messages': '>=18'
 
-  '@cucumber/junit-xml-formatter@0.14.0':
-    resolution: {integrity: sha512-uDuJySsUr1b1VEAERC+YywvVhygBgYIAMyfSMzLZ3LrourudaWZIhfTND4uLNkRZZQcPr6IYv+qj5TP8RTJJ+g==}
+  '@cucumber/junit-xml-formatter@0.15.0':
+    resolution: {integrity: sha512-371k/g1p+UVkxCtRmqPFiVNosV7noV93qH6BbUtN9lXrF22QEbb+YoV0gphhWol0fggVHzfObuk4qJ3YQvDsrg==}
     peerDependencies:
       '@cucumber/messages': '*'
 
@@ -332,19 +329,11 @@ packages:
     peerDependencies:
       '@cucumber/messages': '>=17.1.1'
 
-  '@cucumber/messages@33.0.4':
-    resolution: {integrity: sha512-i6P1a0bnmhecOHfvIW0rhMxv/gMKfBKwDMxmD9/Uo1HSqpQ17ocHms1JwWW6uTMLAopqqWlcz7l6Pax+qUOTzg==}
+  '@cucumber/messages@34.2.1':
+    resolution: {integrity: sha512-aj2iCAG9ZOpMVcMxcgShifv5fbR96b7SMgdWcPXXh2QbFp7OEcAnQ5MC5YfWUDSDasmw7FU5NJEsOrXdTQOU1A==}
 
-  '@cucumber/messages@34.2.0':
-    resolution: {integrity: sha512-6X6T1TApmbQNqxC0Oh3GcnLU+gfE5fp+cEXE/ml6+Ldx76Q6BDmkgM5vagSSDXP+vetPV2Fb0kWVeP7QIR6+Aw==}
-
-  '@cucumber/pretty-formatter@4.0.0':
-    resolution: {integrity: sha512-vWKHUfjMphtbeHHlQBZ1gQzPL3/HE/O2dNnpBqEOIDwvhp7tKvqSe8kscp2H7pArbxN6euEpR5JbstJdzo3iyg==}
-    peerDependencies:
-      '@cucumber/messages': '*'
-
-  '@cucumber/query@16.0.0':
-    resolution: {integrity: sha512-CtGBHLc92y1RNogXGOFVF7so+XdLR5rVuJGsS6nH7yLeayyYhdV8lYW/LG8R05cm4irG/RO6Wn5I2CAgxMhmwQ==}
+  '@cucumber/pretty-formatter@4.1.0':
+    resolution: {integrity: sha512-cbdb494+X3nHxvP34sbyia7CeVIkqs0K3+LWpsF8szCSUVYOxhmbP66H/Yd7f6yr2BhKLmkDokyEX24VAyOstA==}
     peerDependencies:
       '@cucumber/messages': '*'
 
@@ -353,8 +342,8 @@ packages:
     peerDependencies:
       '@cucumber/messages': '*'
 
-  '@cucumber/tag-expressions@11.0.0':
-    resolution: {integrity: sha512-7Uo6dYST8xZbHwwemXCt7Kv80Yh/SE85DyOed1/FTwxRXs3NYVOCm6e/h8DxlhTGIpD6rYXfpY3nHnIXAFMBlw==}
+  '@cucumber/tag-expressions@11.0.1':
+    resolution: {integrity: sha512-x0AssM2HKLoxw8gSeAsYo0QK9wImODYBNDO423/K1Pfk2vwA/MdecRS1ky5i3Rl84kohaG0uUXhIBR+HTu/Qjg==}
 
   '@istanbuljs/schema@0.1.6':
     resolution: {integrity: sha512-+Sg6GCR/wy1oSmQDFq4LQDAhm3ETKnorxN+y5nbLULOR3P0c14f2Wurzj3/xqPXtasLFfHd5iRFQ7AJt4KH2cw==}
@@ -389,8 +378,8 @@ packages:
   '@types/ms@2.1.0':
     resolution: {integrity: sha512-GsCCIZDE/p3i96vtEqx+7dBUGXrc7zeSK3wwPHIaRThS+9OhWIXRqzs4d6k1SVU8g91DrNRWxWUGhp5KXQb2VA==}
 
-  '@types/node@26.6.4':
-    resolution: {integrity: sha512-ldVPDCzj7fsaGZrLB0NuHuTvJcsNasysBAqMolr/cgxrLd1xbqxIr3XJiPnHHJUCxj5sNF1vnRj9aWnrVh5Jcg==}
+  '@types/node@26.6.5':
+    resolution: {integrity: sha512-uMzsv9stDdofIZBx4UGh4Z9ZgXnGC9seRDscilBcTHAeOFk67MZg/k9bWVfO+bk4qZmG+l52hRnLwUiH2LnJTg==}
 
   '@types/normalize-package-data@2.4.4':
     resolution: {integrity: sha512-37i+OaWTh9qeK4LSHPsyRC7NahnGotNuZvjLSgcPzblpHB3rrCJxAOgI5gCdKm7coonsaX1Of0ILiTcnZjbfxA==}
@@ -702,8 +691,8 @@ packages:
   extend@3.0.2:
     resolution: {integrity: sha512-fjquC59cD7CyW6urNXK0FBufkZcoiGG80wTuPujX590cB5Ttln20E2UB4S/WARVqhXffZl2LNgS+gQdPIIim/g==}
 
-  fast-equals@6.1.0:
-    resolution: {integrity: sha512-MDA0N5wXvmx0yR0xeOf20qVMbyaEzS2kuxhBrDrIT5w3Gap7bZ/24jtvOvbthbZFmf+7PCC8XCJKGpmhVtvbIg==}
+  fast-equals@6.1.1:
+    resolution: {integrity: sha512-VA9UvhVec1yj1UqkCLBCXgFBLbd6Pww2RGLa9biAHfl+/aOU9jTeP3idEtLLFouJIGDeugAxD/GhzHpjOSq4oA==}
     engines: {node: '>=6.0.0'}
 
   fdir@6.5.0:
@@ -1063,8 +1052,8 @@ packages:
     resolution: {integrity: sha512-bzyZ1e88w9O1iNJbKnOlvYTrWPDl46O1bG0D3XInv+9tkPrxrN8jUUTiFlDkkmKWgn1M6CfIA13SuGqOa9Korw==}
     engines: {node: '>=14'}
 
-  smol-toml@1.9.0:
-    resolution: {integrity: sha512-hpd+HLON7HdZXqYchMM/+LaTTbdK0AU3NngIJ4KVyWbY9bfQqdL9cD+4yf6dUoU2Ap4VsU0JkQi6FxAI1B2mXQ==}
+  smol-toml@1.9.1:
+    resolution: {integrity: sha512-j7WyPdf0CJoutMzMoPLF/bVXHtKZIT9Rb4eGeEbWw8X2t5oirjPgpL+OpaENZrILYaXqYwnVH+qgUwVbl+pUJQ==}
     engines: {node: '>= 18'}
 
   source-map-support@0.5.21:
@@ -1291,11 +1280,11 @@ snapshots:
       '@cspell/dict-css': 4.1.2
       '@cspell/dict-dart': 2.3.2
       '@cspell/dict-data-science': 2.0.16
-      '@cspell/dict-django': 4.1.6
+      '@cspell/dict-django': 4.1.7
       '@cspell/dict-docker': 1.1.17
       '@cspell/dict-dotnet': 5.0.15
       '@cspell/dict-elixir': 4.0.8
-      '@cspell/dict-en-common-misspellings': 2.2.3
+      '@cspell/dict-en-common-misspellings': 2.2.4
       '@cspell/dict-en-gb-mit': 3.1.29
       '@cspell/dict-en_us': 4.4.40
       '@cspell/dict-filetypes': 3.0.18
@@ -1321,7 +1310,7 @@ snapshots:
       '@cspell/dict-markdown': 2.0.18(@cspell/dict-css@4.1.2)(@cspell/dict-html-symbol-entities@4.0.5)(@cspell/dict-html@4.0.16)(@cspell/dict-typescript@3.2.3)
       '@cspell/dict-monkeyc': 1.1.2
       '@cspell/dict-node': 5.0.9
-      '@cspell/dict-npm': 5.2.52
+      '@cspell/dict-npm': 5.2.53
       '@cspell/dict-php': 4.1.3
       '@cspell/dict-powershell': 5.0.17
       '@cspell/dict-public-licenses': 2.0.17
@@ -1331,7 +1320,7 @@ snapshots:
       '@cspell/dict-rust': 4.1.2
       '@cspell/dict-scala': 5.0.11
       '@cspell/dict-shell': 1.2.0
-      '@cspell/dict-software-terms': 5.4.6
+      '@cspell/dict-software-terms': 5.4.7
       '@cspell/dict-sql': 2.2.1
       '@cspell/dict-svelte': 1.0.7
       '@cspell/dict-swift': 2.0.6
@@ -1384,7 +1373,7 @@ snapshots:
 
   '@cspell/dict-data-science@2.0.16': {}
 
-  '@cspell/dict-django@4.1.6': {}
+  '@cspell/dict-django@4.1.7': {}
 
   '@cspell/dict-docker@1.1.17': {}
 
@@ -1392,7 +1381,7 @@ snapshots:
 
   '@cspell/dict-elixir@4.0.8': {}
 
-  '@cspell/dict-en-common-misspellings@2.2.3': {}
+  '@cspell/dict-en-common-misspellings@2.2.4': {}
 
   '@cspell/dict-en-gb-mit@3.1.29': {}
 
@@ -1449,7 +1438,7 @@ snapshots:
 
   '@cspell/dict-node@5.0.9': {}
 
-  '@cspell/dict-npm@5.2.52': {}
+  '@cspell/dict-npm@5.2.53': {}
 
   '@cspell/dict-php@4.1.3': {}
 
@@ -1471,7 +1460,7 @@ snapshots:
 
   '@cspell/dict-shell@1.2.0': {}
 
-  '@cspell/dict-software-terms@5.4.6': {}
+  '@cspell/dict-software-terms@5.4.7': {}
 
   '@cspell/dict-sql@2.2.1': {}
 
@@ -1500,25 +1489,25 @@ snapshots:
 
   '@cspell/url@10.3.6': {}
 
-  '@cucumber/ci-environment@14.0.0': {}
+  '@cucumber/ci-environment@15.0.0': {}
 
-  '@cucumber/cucumber-expressions@20.0.0':
+  '@cucumber/cucumber-expressions@20.1.0':
     dependencies:
       regexp-match-indices: 1.0.2
 
-  '@cucumber/cucumber@13.2.1':
+  '@cucumber/cucumber@13.3.0':
     dependencies:
-      '@cucumber/ci-environment': 14.0.0
-      '@cucumber/cucumber-expressions': 20.0.0
-      '@cucumber/gherkin': 42.0.0
-      '@cucumber/gherkin-streams': 7.0.1(@cucumber/gherkin@42.0.0)(@cucumber/message-streams@5.0.1(@cucumber/messages@34.2.0))(@cucumber/messages@34.2.0)
-      '@cucumber/gherkin-utils': 12.0.1
-      '@cucumber/html-formatter': 24.1.0(@cucumber/messages@34.2.0)
-      '@cucumber/junit-xml-formatter': 0.14.0(@cucumber/messages@34.2.0)
-      '@cucumber/message-streams': 5.0.1(@cucumber/messages@34.2.0)
-      '@cucumber/messages': 34.2.0
-      '@cucumber/pretty-formatter': 4.0.0(@cucumber/messages@34.2.0)
-      '@cucumber/tag-expressions': 11.0.0
+      '@cucumber/ci-environment': 15.0.0
+      '@cucumber/cucumber-expressions': 20.1.0
+      '@cucumber/gherkin': 42.0.1
+      '@cucumber/gherkin-streams': 7.0.1(@cucumber/gherkin@42.0.1)(@cucumber/message-streams@5.0.1(@cucumber/messages@34.2.1))(@cucumber/messages@34.2.1)
+      '@cucumber/gherkin-utils': 12.0.2
+      '@cucumber/html-formatter': 24.2.0(@cucumber/messages@34.2.1)
+      '@cucumber/junit-xml-formatter': 0.15.0(@cucumber/messages@34.2.1)
+      '@cucumber/message-streams': 5.0.1(@cucumber/messages@34.2.1)
+      '@cucumber/messages': 34.2.1
+      '@cucumber/pretty-formatter': 4.1.0(@cucumber/messages@34.2.1)
+      '@cucumber/tag-expressions': 11.0.1
       assertion-error-formatter: 3.0.0
       cli-table3: 0.6.5
       commander: 15.0.0
@@ -1541,70 +1530,58 @@ snapshots:
       yaml: 2.9.1
       yup: 1.7.1
 
-  '@cucumber/gherkin-streams@7.0.1(@cucumber/gherkin@42.0.0)(@cucumber/message-streams@5.0.1(@cucumber/messages@34.2.0))(@cucumber/messages@34.2.0)':
+  '@cucumber/gherkin-streams@7.0.1(@cucumber/gherkin@42.0.1)(@cucumber/message-streams@5.0.1(@cucumber/messages@34.2.1))(@cucumber/messages@34.2.1)':
     dependencies:
-      '@cucumber/gherkin': 42.0.0
-      '@cucumber/message-streams': 5.0.1(@cucumber/messages@34.2.0)
-      '@cucumber/messages': 34.2.0
+      '@cucumber/gherkin': 42.0.1
+      '@cucumber/message-streams': 5.0.1(@cucumber/messages@34.2.1)
+      '@cucumber/messages': 34.2.1
       commander: 15.0.0
       source-map-support: 0.5.21
 
-  '@cucumber/gherkin-utils@12.0.1':
+  '@cucumber/gherkin-utils@12.0.2':
     dependencies:
-      '@cucumber/gherkin': 41.0.0
-      '@cucumber/messages': 33.0.4
+      '@cucumber/gherkin': 42.0.1
+      '@cucumber/messages': 34.2.1
       '@teppeis/multimaps': 3.0.0
       commander: 15.0.0
       source-map-support: 0.5.21
 
-  '@cucumber/gherkin@41.0.0':
+  '@cucumber/gherkin@42.0.1':
     dependencies:
-      '@cucumber/messages': 33.0.4
+      '@cucumber/messages': 34.2.1
 
-  '@cucumber/gherkin@42.0.0':
+  '@cucumber/html-formatter@24.2.0(@cucumber/messages@34.2.1)':
     dependencies:
-      '@cucumber/messages': 34.2.0
+      '@cucumber/messages': 34.2.1
 
-  '@cucumber/html-formatter@24.1.0(@cucumber/messages@34.2.0)':
+  '@cucumber/junit-xml-formatter@0.15.0(@cucumber/messages@34.2.1)':
     dependencies:
-      '@cucumber/messages': 34.2.0
-
-  '@cucumber/junit-xml-formatter@0.14.0(@cucumber/messages@34.2.0)':
-    dependencies:
-      '@cucumber/messages': 34.2.0
-      '@cucumber/query': 16.1.1(@cucumber/messages@34.2.0)
+      '@cucumber/messages': 34.2.1
+      '@cucumber/query': 16.1.1(@cucumber/messages@34.2.1)
       '@teppeis/multimaps': 3.0.0
       luxon: 3.7.2
       xmlbuilder: 15.1.1
 
-  '@cucumber/message-streams@5.0.1(@cucumber/messages@34.2.0)':
+  '@cucumber/message-streams@5.0.1(@cucumber/messages@34.2.1)':
     dependencies:
-      '@cucumber/messages': 34.2.0
+      '@cucumber/messages': 34.2.1
       mime: 4.1.0
 
-  '@cucumber/messages@33.0.4': {}
+  '@cucumber/messages@34.2.1': {}
 
-  '@cucumber/messages@34.2.0': {}
-
-  '@cucumber/pretty-formatter@4.0.0(@cucumber/messages@34.2.0)':
+  '@cucumber/pretty-formatter@4.1.0(@cucumber/messages@34.2.1)':
     dependencies:
-      '@cucumber/messages': 34.2.0
-      '@cucumber/query': 16.0.0(@cucumber/messages@34.2.0)
+      '@cucumber/messages': 34.2.1
+      '@cucumber/query': 16.1.1(@cucumber/messages@34.2.1)
       luxon: 3.7.2
 
-  '@cucumber/query@16.0.0(@cucumber/messages@34.2.0)':
+  '@cucumber/query@16.1.1(@cucumber/messages@34.2.1)':
     dependencies:
-      '@cucumber/messages': 34.2.0
+      '@cucumber/messages': 34.2.1
       '@teppeis/multimaps': 3.0.0
       lodash.sortby: 4.7.0
 
-  '@cucumber/query@16.1.1(@cucumber/messages@34.2.0)':
-    dependencies:
-      '@cucumber/messages': 34.2.0
-      '@teppeis/multimaps': 3.0.0
-      lodash.sortby: 4.7.0
-
-  '@cucumber/tag-expressions@11.0.0': {}
+  '@cucumber/tag-expressions@11.0.1': {}
 
   '@istanbuljs/schema@0.1.6': {}
 
@@ -1635,7 +1612,7 @@ snapshots:
 
   '@types/ms@2.1.0': {}
 
-  '@types/node@26.6.4':
+  '@types/node@26.6.5':
     dependencies:
       undici-types: 8.9.0
 
@@ -1792,7 +1769,7 @@ snapshots:
     dependencies:
       '@cspell/cspell-types': 10.3.6
       comment-json: 5.0.0
-      smol-toml: 1.9.0
+      smol-toml: 1.9.1
       yaml: 2.9.1
 
   cspell-dictionary@10.3.6:
@@ -1801,7 +1778,7 @@ snapshots:
       '@cspell/cspell-pipe': 10.3.6
       '@cspell/cspell-types': 10.3.6
       cspell-trie-lib: 10.3.6(@cspell/cspell-types@10.3.6)
-      fast-equals: 6.1.0
+      fast-equals: 6.1.1
 
   cspell-gitignore@10.3.6:
     dependencies:
@@ -1913,7 +1890,7 @@ snapshots:
 
   extend@3.0.2: {}
 
-  fast-equals@6.1.0: {}
+  fast-equals@6.1.1: {}
 
   fdir@6.5.0(picomatch@4.0.7):
     optionalDependencies:
@@ -2337,7 +2314,7 @@ snapshots:
 
   signal-exit@4.1.0: {}
 
-  smol-toml@1.9.0: {}
+  smol-toml@1.9.1: {}
 
   source-map-support@0.5.21:
     dependencies:
