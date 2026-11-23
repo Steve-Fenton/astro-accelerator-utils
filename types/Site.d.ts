@@ -36,7 +36,6 @@ export type Site = {
         headers: ('link')[];
         details: ('tabs')[];
         search: ('dialog' | 'headings')[];
-        article: ('bannerImage');
     };
     images: {
         contentSize: string;
